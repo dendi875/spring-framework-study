@@ -1,49 +1,68 @@
 package com.zq.dependency.injection;
 
 import com.zq.spring.ioc.overview.domain.User;
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.env.Environment;
 
 /**
  *
- *  基于 Java 注解的依赖 Constructor 方法注入示例
+ *  基于 {@link org.springframework.beans.factory.Aware} 接口回调的依赖注入示例
  *
- *  视频：56丨构造器依赖注入：官方为什么推荐使用构造器注入？.mp4
+ *  视频：59丨接口回调注入：回调注入的使用场景和限制有哪些？.mp4
  *
  *  PPT: 第六章 Spring 依赖注入.pdf
  *
  * @author <quanzhang875@gmail.com>
  * @since  2023-09-30 21:16:59
  */
-public class AnnotationDependencyConstructorInjectionDemo {
+public class AwareInterfaceDependencyInjectionDemo implements
+		BeanFactoryAware, ApplicationContextAware, EnvironmentAware {
+
+	private static BeanFactory beanFactory;
+
+	private static ApplicationContext applicationContext;
+
+	private static  Environment environment;
 
 	public static void main(String[] args) {
 
 		// 创建 BeanFactory 容器
-		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
-		// 注册 Configuration Class（配置类）
-		applicationContext.register(AnnotationDependencyConstructorInjectionDemo.class);
-
-		XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(applicationContext);
-
-		String xmlResourcePath = "classpath:/META-INF/dependency-lookup-context.xml";
-		// 加载 XML 资源，解析并且生成 BeanDefinition
-		beanDefinitionReader.loadBeanDefinitions(xmlResourcePath);
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+		// 注册 Configuration Class（配置类），也是一个 Spring Bean
+		context.register(AwareInterfaceDependencyInjectionDemo.class);
 
 		// 启动 Spring 应用上下文
-		applicationContext.refresh();
+		context.refresh();
 
-		// 依赖查找并且创建 Bean
-		UserHolder userHolder = applicationContext.getBean(UserHolder.class);
-		System.out.println(userHolder);
+		System.out.println(beanFactory == context.getBeanFactory());
+		System.out.println(applicationContext == context);
+
+		System.out.println(environment == context.getEnvironment());
 
 		// 显示地关闭 Spring 应用上下文
-		applicationContext.close();
+		context.close();
 	}
 
-	@Bean
-	public UserHolder userHolder(User user) {
-		return new UserHolder(user);
+	@Override
+	public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+		AwareInterfaceDependencyInjectionDemo.beanFactory = beanFactory;
+	}
+
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		AwareInterfaceDependencyInjectionDemo.applicationContext = applicationContext;
+	}
+
+	@Override
+	public void setEnvironment(Environment environment) {
+		AwareInterfaceDependencyInjectionDemo.environment = environment;
 	}
 }
