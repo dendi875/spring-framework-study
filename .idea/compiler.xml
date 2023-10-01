@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="dependency-injection" />
+        <module name="dependency-source" />
         <module name="spring-bean" />
         <module name="dependency-lookup" />
         <module name="ioc-container-overview" />

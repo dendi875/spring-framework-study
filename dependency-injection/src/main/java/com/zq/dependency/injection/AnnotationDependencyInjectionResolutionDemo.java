@@ -31,6 +31,9 @@ import static org.springframework.context.annotation.AnnotationConfigUtils.AUTOW
  *		• 入口 - DefaultListableBeanFactory#resolveDependency
  *		• 依赖描述符 - DependencyDescriptor
  *		• 自定绑定候选对象处理器 - AutowireCandidateResolver
+ *		* AutowiredAnnotationBeanPostProcessor
+ *		* CommonAnnotationBeanPostProcessor
+ *
  *
  * 视频：65丨依赖处理过程：依赖处理时会发生什么？其中与依赖查找的差异在哪？.mp4
  * PPT：第六章 Spring 依赖注入.pdf
