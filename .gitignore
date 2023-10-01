@@ -1,35 +1,52 @@
-/target/
-!.mvn/wrapper/maven-wrapper.jar
+# maven ignore
+target/
+*.jar
+!.mvn/wrapper/*
+*.war
+*.zip
+*.tar
+*.tar.gz
+.flattened-pom.xml
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
+# eclipse ignore
+.settings/
 .project
-.settings
-.springBeans
-.sts4-cache
+.classpath
 
-### IntelliJ IDEA ###
+# idea ignore
+.idea/
 .idea
-*.iws
-*.iml
 *.ipr
+*.iml
+*.iws
 
-### NetBeans ###
-/nbproject/private/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-#temp file
+# temp ignore
 *.log
 *.cache
 *.diff
 *.patch
 *.tmp
-/**/target/
-/log/
-/**/log/
+
+# system ignore
+.DS_Store
+Thumbs.db
+*.orig
+
+# flatten ignore
+.flattened-pom.xml
+
+# license check result
+license-list
+
+# grpc compiler
+compiler/gradle.properties
+compiler/build/*
+compiler/.gradle/*
+
+# Data
+db/
+activemq-data/
+.data/
+# Tomcat
+.extract
+.java-version
