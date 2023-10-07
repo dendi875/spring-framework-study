@@ -18,7 +18,7 @@ import org.springframework.context.annotation.AnnotatedBeanDefinitionReader;
  * 视频：89丨SpringBean元信息解析阶段：BeanDefinition的解析.mp4
  * PPT：第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
  *
- * @author <quanzhang875@gmail.com>
+ * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-07 17:29:03
  */
 public class BeanMetadataParsingDemo {
