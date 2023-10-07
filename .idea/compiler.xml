@@ -12,6 +12,7 @@
         <module name="ioc-container-overview" />
         <module name="dependency-lookup" />
         <module name="bean-scope" />
+        <module name="bean-lifecycle" />
       </profile>
     </annotationProcessing>
   </component>
