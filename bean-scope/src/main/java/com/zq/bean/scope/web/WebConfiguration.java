@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.annotation.ApplicationScope;
 import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
@@ -18,8 +19,8 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 public class WebConfiguration {
 
 	@Bean
-	 @RequestScope
-	//@SessionScope
+	 //@RequestScope
+	@SessionScope
 	//@ApplicationScope
 	public User user() {
 		User user = new User();
