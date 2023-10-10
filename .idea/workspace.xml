@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba24da9-ea57-4763-9c7d-67756aaaa794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanInstantiationLifecycleDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/UserHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/resources/META-INF/bean-constructor-dependency-injection.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/BeanInstantiationBeforeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanInstantiationBeforeDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/BeanMetadataConfigurationDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanMetadataConfigurationDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/BeanMetadataParsingDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanMetadataParsingDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/MergedBeanDefinitionDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/MergedBeanDefinitionDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanInstantiationBeforeDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanInstantiationLifecycleDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanInstantiationLifecycleDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +201,7 @@
       <workItem from="1695202690934" duration="1134000" />
       <workItem from="1696041014032" duration="48690000" />
       <workItem from="1696683187820" duration="8022000" />
-      <workItem from="1696935901005" duration="1703000" />
+      <workItem from="1696935901005" duration="2162000" />
     </task>
     <servers />
   </component>
@@ -245,41 +240,41 @@
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state x="659" y="256" key="#xdebugger.evaluate/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696823045910" />
-    <state width="1750" height="432" key="GridCell.Tab.0.bottom" timestamp="1696823065273">
+    <state width="1750" height="346" key="GridCell.Tab.0.bottom" timestamp="1696938992230">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126415" />
     <state width="1750" height="272" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781275" />
     <state width="1750" height="2" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="26" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696649867063" />
-    <state width="1750" height="432" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696823065273" />
+    <state width="1750" height="346" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696938992230" />
     <state width="1750" height="371" key="GridCell.Tab.0.bottom/0.25.1792.1048@0.25.1792.1048" timestamp="1696169427141" />
-    <state width="1750" height="432" key="GridCell.Tab.0.center" timestamp="1696823065272">
+    <state width="1750" height="346" key="GridCell.Tab.0.center" timestamp="1696938992229">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
     <state width="1750" height="272" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781274" />
     <state width="1750" height="2" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="26" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696649867062" />
-    <state width="1750" height="432" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696823065272" />
+    <state width="1750" height="346" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696938992229" />
     <state width="1750" height="371" key="GridCell.Tab.0.center/0.25.1792.1048@0.25.1792.1048" timestamp="1696169427140" />
-    <state width="1750" height="432" key="GridCell.Tab.0.left" timestamp="1696823065272">
+    <state width="1750" height="346" key="GridCell.Tab.0.left" timestamp="1696938992228">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
     <state width="1750" height="272" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781274" />
     <state width="1750" height="2" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695069" />
     <state width="1878" height="26" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696649867061" />
-    <state width="1750" height="432" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696823065272" />
+    <state width="1750" height="346" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696938992228" />
     <state width="1750" height="371" key="GridCell.Tab.0.left/0.25.1792.1048@0.25.1792.1048" timestamp="1696169427139" />
-    <state width="1750" height="432" key="GridCell.Tab.0.right" timestamp="1696823065273">
+    <state width="1750" height="346" key="GridCell.Tab.0.right" timestamp="1696938992229">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126414" />
     <state width="1750" height="272" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781275" />
     <state width="1750" height="2" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="26" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696649867062" />
-    <state width="1750" height="432" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696823065273" />
+    <state width="1750" height="346" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696938992229" />
     <state width="1750" height="371" key="GridCell.Tab.0.right/0.25.1792.1048@0.25.1792.1048" timestamp="1696169427140" />
     <state width="1750" height="432" key="GridCell.Tab.1.bottom" timestamp="1696823065274">
       <screen x="0" y="25" width="1792" height="1048" />

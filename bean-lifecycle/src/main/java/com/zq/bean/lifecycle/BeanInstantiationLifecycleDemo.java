@@ -11,11 +11,26 @@ import org.springframework.util.ObjectUtils;
 /**
  * Spring Bean 实例化生命周期
  *
+ * Spring Bean 实例化前阶段
+ *  • 非主流生命周期 - Bean 实例化前阶段
+ *  	• InstantiationAwareBeanPostProcessor#postProcessBeforeInstantiation
+ *
+ *  视频：93丨SpringBean实例化前阶段：Bean的实例化能否被绕开？.mp4
+ *  PPT: 第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
+ *
  * Spring Bean 实例化阶段
  * • 实例化方式
  * 		• 传统实例化方式
  * 			• 实例化策略 - InstantiationStrategy
  * 		• 构造器依赖注入
+ *	视频：94丨SpringBean实例化阶段：Bean实例是通过Java反射创建吗？.mp4
+ *  PPT: 第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
+ *
+ * Spring Bean 实例化后阶段
+ * • Bean 属性赋值（Populate）判断
+ * 		• InstantiationAwareBeanPostProcessor#postProcessAfterInstantiation
+ *  视频：95丨SpringBean实例化后阶段：Bean实例化后是否一定被是使用吗？.mp4
+ *  PPT: 第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
  *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-10 19:03:41
@@ -52,6 +67,18 @@ public class BeanInstantiationLifecycleDemo {
 				return new SuperUser();
 			}
 			return null; // 保持 Spring IoC 容器的实例化操作，也就是保持即有状态不变
+		}
+
+		@Override
+		public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
+			if (ObjectUtils.nullSafeEquals("user", beanName) && User.class.equals(bean.getClass())) {
+				User user = (User) bean;
+				user.setId(2L);
+				user.setName("zq2");
+				// "user" 对象不允许属性赋值（填入）（配置元信息 -> 属性值）
+				return false;
+			}
+			return true;
 		}
 	}
 }
