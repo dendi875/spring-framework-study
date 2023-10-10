@@ -1,14 +1,9 @@
 package com.zq.bean.lifecycle;
 
-import com.zq.spring.ioc.overview.domain.SuperUser;
 import com.zq.spring.ioc.overview.domain.User;
-import org.springframework.beans.BeansException;
-import org.springframework.beans.MutablePropertyValues;
-import org.springframework.beans.PropertyValues;
-import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.util.ObjectUtils;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Spring Bean 实例化生命周期
@@ -44,14 +39,29 @@ import org.springframework.util.ObjectUtils;
  * 视频：96丨SpringBean属性赋值前阶段：配置后的PropertyValues还有机会修改吗？.mp4
  * PPT: 第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
  *
+ * Spring Bean Aware接口回调阶段
+ * 	视频：97丨Aware接口回调阶段：众多Aware接口回调的顺序是安排的？.mp4
+ * 	PPT: 第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
+ *
+ *
+ *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-10 19:03:41
  */
 public class BeanInstantiationLifecycleDemo {
 	public static void main(String[] args) {
+		executeBeanFactory();
+
+		System.out.println("--------------------------------");
+
+		executeApplicationContext();
+	}
+
+	private static void executeBeanFactory() {
 		DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
-		// 添加 BeanPostProcessor 实现
-		beanFactory.addBeanPostProcessor(new MyInstantiationAwareBeanPostProcessor());
+		// 方法一：添加 BeanPostProcessor 实现 MyInstantiationAwareBeanPostProcessor
+		// beanFactory.addBeanPostProcessor(new MyInstantiationAwareBeanPostProcessor());
+		// 方法二：将 MyInstantiationAwareBeanPostProcessor 作为 Bean 注册
 
 		// 基于 XML 资源 BeanDefinitionReader 实现
 		XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanFactory);
@@ -70,64 +80,26 @@ public class BeanInstantiationLifecycleDemo {
 		System.out.println(userHolder);
 	}
 
-	static class MyInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor {
 
-		@Override
-		public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
-			if (ObjectUtils.nullSafeEquals("superUser", beanName) && SuperUser.class.equals(beanClass)) {
-				// 把配置完成的 superUser Bean 覆盖掉
-				return new SuperUser();
-			}
-			return null; // 保持 Spring IoC 容器的实例化操作，也就是保持即有状态不变
-		}
+	private static void executeApplicationContext() {
+		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext();
+		String[] locations = {"META-INF/dependency-lookup-context.xml", "META-INF/bean-constructor-dependency-injection.xml"};
+		applicationContext.setConfigLocations(locations);
+		// 启动应用上下文
+		applicationContext.refresh();
 
-		@Override
-		public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
-			if (ObjectUtils.nullSafeEquals("user", beanName) && User.class.equals(bean.getClass())) {
-				User user = (User) bean;
-				user.setId(2L);
-				user.setName("zq2");
-				// "user" 对象不允许属性赋值（填入）（配置元信息 -> 属性值）
-				return false;
-			}
-			return true;
-		}
+		User user = applicationContext.getBean("user", User.class);
+		System.out.println(user);
 
-		// 在实例化之后和赋值中间还有一个阶段，也就是在赋值前阶段有个回调，我们称之为赋值前的一个生命周期
+		User superUser = applicationContext.getBean("superUser", User.class);
+		System.out.println(superUser);
 
-		// user 是跳过 Bean 属性赋值（填入）
-		// superUser 也是完全跳过 Bean 实例化（Bean 属性赋值（填入））
-		// userHolder 对属性值进行拦截修改
-		@Override
-		public PropertyValues postProcessProperties(PropertyValues pvs, Object bean, String beanName)
-				throws BeansException {
-			// 对 "userHolder" Bean 进行拦截
-			if (ObjectUtils.nullSafeEquals("userHolder", beanName) && UserHolder.class.equals(bean.getClass())) {
-				// 假设 <property name="number" value="1" /> 配置的话，那么在 PropertyValues 就包含一个 PropertyValue(number=1)
+		// 构造器注入按照类型注入，resolveDependency
+		UserHolder userHolder = applicationContext.getBean("userHolder", UserHolder.class);
+		System.out.println(userHolder);
 
-				final MutablePropertyValues propertyValues;
+		// 关闭应用上下文
+		applicationContext.close();
 
-				if (pvs instanceof MutablePropertyValues) {
-					propertyValues = (MutablePropertyValues) pvs;
-				} else {
-					propertyValues = new MutablePropertyValues();
-				}
-
-				// 等价于 <property name="number" value="1" />
-				propertyValues.addPropertyValue("number", "1");
-				// 原始配置 <property name="description" value="The user holder" />
-
-				// 如果存在 "description" 属性配置的话
-				if (propertyValues.contains("description")) {
-					// PropertyValue value 是不可变的
-//                    PropertyValue propertyValue = propertyValues.getPropertyValue("description");
-					propertyValues.removePropertyValue("description");
-					propertyValues.addPropertyValue("description", "The user holder V2");
-				}
-
-				return propertyValues;
-			}
-			return null;
-		}
 	}
 }
