@@ -3,6 +3,8 @@ package com.zq.bean.lifecycle;
 import com.zq.spring.ioc.overview.domain.SuperUser;
 import com.zq.spring.ioc.overview.domain.User;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.MutablePropertyValues;
+import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -31,6 +33,16 @@ import org.springframework.util.ObjectUtils;
  * 		• InstantiationAwareBeanPostProcessor#postProcessAfterInstantiation
  *  视频：95丨SpringBean实例化后阶段：Bean实例化后是否一定被是使用吗？.mp4
  *  PPT: 第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
+ *
+ * Spring Bean 属性赋值前阶段
+ * • Bean 属性值元信息
+ * 		• PropertyValues
+ * • Bean 属性赋值前回调
+ * 		• Spring 1.2 - 5.0：InstantiationAwareBeanPostProcessor#postProcessPropertyValues
+ * 		• Spring 5.1：      InstantiationAwareBeanPostProcessor#postProcessProperties
+ *
+ * 视频：96丨SpringBean属性赋值前阶段：配置后的PropertyValues还有机会修改吗？.mp4
+ * PPT: 第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
  *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-10 19:03:41
@@ -79,6 +91,43 @@ public class BeanInstantiationLifecycleDemo {
 				return false;
 			}
 			return true;
+		}
+
+		// 在实例化之后和赋值中间还有一个阶段，也就是在赋值前阶段有个回调，我们称之为赋值前的一个生命周期
+
+		// user 是跳过 Bean 属性赋值（填入）
+		// superUser 也是完全跳过 Bean 实例化（Bean 属性赋值（填入））
+		// userHolder 对属性值进行拦截修改
+		@Override
+		public PropertyValues postProcessProperties(PropertyValues pvs, Object bean, String beanName)
+				throws BeansException {
+			// 对 "userHolder" Bean 进行拦截
+			if (ObjectUtils.nullSafeEquals("userHolder", beanName) && UserHolder.class.equals(bean.getClass())) {
+				// 假设 <property name="number" value="1" /> 配置的话，那么在 PropertyValues 就包含一个 PropertyValue(number=1)
+
+				final MutablePropertyValues propertyValues;
+
+				if (pvs instanceof MutablePropertyValues) {
+					propertyValues = (MutablePropertyValues) pvs;
+				} else {
+					propertyValues = new MutablePropertyValues();
+				}
+
+				// 等价于 <property name="number" value="1" />
+				propertyValues.addPropertyValue("number", "1");
+				// 原始配置 <property name="description" value="The user holder" />
+
+				// 如果存在 "description" 属性配置的话
+				if (propertyValues.contains("description")) {
+					// PropertyValue value 是不可变的
+//                    PropertyValue propertyValue = propertyValues.getPropertyValue("description");
+					propertyValues.removePropertyValue("description");
+					propertyValues.addPropertyValue("description", "The user holder V2");
+				}
+
+				return propertyValues;
+			}
+			return null;
 		}
 	}
 }
