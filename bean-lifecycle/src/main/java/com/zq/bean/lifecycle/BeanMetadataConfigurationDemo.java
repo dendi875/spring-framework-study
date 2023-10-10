@@ -1,4 +1,4 @@
-package com.zq;
+package com.zq.bean.lifecycle;
 
 import com.zq.spring.ioc.overview.container.BeanFactoryAsIoCContainerDemo;
 import com.zq.spring.ioc.overview.domain.User;
