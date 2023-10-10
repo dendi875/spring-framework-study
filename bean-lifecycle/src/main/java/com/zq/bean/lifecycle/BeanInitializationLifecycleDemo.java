@@ -17,6 +17,14 @@ import org.springframework.context.annotation.CommonAnnotationBeanPostProcessor;
  * 		• @PostConstruct 标注方法
  * 		• 实现 InitializingBean 接口的 afterPropertiesSet() 方法
  * 		• 自定义初始化方法
+ * 视频：99丨SpringBean初始化阶段：@PostConstruct、InitializingBean以及自定义方法.mp4
+ * PPT：第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
+ *
+ * Spring Bean 初始化后阶段
+ * • 方法回调
+ * 		• BeanPostProcessor#postProcessAfterInitialization
+ * 视频：100丨SpringBean初始化后阶段：BeanPostProcessor.mp4
+ * PPT：第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
  *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-10 21:02:38
