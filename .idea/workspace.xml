@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba24da9-ea57-4763-9c7d-67756aaaa794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanInitializationLifecycleDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/MyInstantiationAwareBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/MyInstantiationAwareBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanInitializationLifecycleDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanInitializationLifecycleDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanInstantiationLifecycleDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/BeanInstantiationLifecycleDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/UserHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/UserHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean-lifecycle/src/main/resources/META-INF/bean-constructor-dependency-injection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bean-lifecycle/src/main/resources/META-INF/bean-constructor-dependency-injection.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +209,7 @@
       <workItem from="1695202690934" duration="1134000" />
       <workItem from="1696041014032" duration="48690000" />
       <workItem from="1696683187820" duration="8022000" />
-      <workItem from="1696935901005" duration="5993000" />
+      <workItem from="1696935901005" duration="7241000" />
     </task>
     <servers />
   </component>
@@ -230,14 +232,14 @@
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state x="464" y="356" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694597086944" />
-    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1696942277645">
+    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1696949758121">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state x="-1147" y="-410" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693830933296" />
     <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694612153345" />
     <state x="-1147" y="-537" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696648664864" />
     <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696942277645" />
-    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048@0.25.1792.1048" timestamp="1696162215216" />
+    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048@0.25.1792.1048" timestamp="1696949758121" />
     <state x="636" y="478" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1696941593415">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
@@ -254,7 +256,7 @@
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state x="659" y="256" key="#xdebugger.evaluate/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696823045910" />
-    <state width="1750" height="5" key="GridCell.Tab.0.bottom" timestamp="1696943074574">
+    <state width="1750" height="538" key="GridCell.Tab.0.bottom" timestamp="1696949924693">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126415" />
@@ -262,8 +264,8 @@
     <state width="1750" height="2" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="26" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696649867063" />
     <state width="1750" height="5" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696943074574" />
-    <state width="1750" height="371" key="GridCell.Tab.0.bottom/0.25.1792.1048@0.25.1792.1048" timestamp="1696169427141" />
-    <state width="1750" height="5" key="GridCell.Tab.0.center" timestamp="1696943074573">
+    <state width="1750" height="538" key="GridCell.Tab.0.bottom/0.25.1792.1048@0.25.1792.1048" timestamp="1696949924693" />
+    <state width="1750" height="538" key="GridCell.Tab.0.center" timestamp="1696949924692">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
@@ -271,8 +273,8 @@
     <state width="1750" height="2" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="26" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696649867062" />
     <state width="1750" height="5" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696943074573" />
-    <state width="1750" height="371" key="GridCell.Tab.0.center/0.25.1792.1048@0.25.1792.1048" timestamp="1696169427140" />
-    <state width="1750" height="5" key="GridCell.Tab.0.left" timestamp="1696943074573">
+    <state width="1750" height="538" key="GridCell.Tab.0.center/0.25.1792.1048@0.25.1792.1048" timestamp="1696949924692" />
+    <state width="1750" height="538" key="GridCell.Tab.0.left" timestamp="1696949924691">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
@@ -280,8 +282,8 @@
     <state width="1750" height="2" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695069" />
     <state width="1878" height="26" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696649867061" />
     <state width="1750" height="5" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696943074573" />
-    <state width="1750" height="371" key="GridCell.Tab.0.left/0.25.1792.1048@0.25.1792.1048" timestamp="1696169427139" />
-    <state width="1750" height="5" key="GridCell.Tab.0.right" timestamp="1696943074574">
+    <state width="1750" height="538" key="GridCell.Tab.0.left/0.25.1792.1048@0.25.1792.1048" timestamp="1696949924691" />
+    <state width="1750" height="538" key="GridCell.Tab.0.right" timestamp="1696949924692">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126414" />
@@ -289,7 +291,7 @@
     <state width="1750" height="2" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="26" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696649867062" />
     <state width="1750" height="5" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696943074574" />
-    <state width="1750" height="371" key="GridCell.Tab.0.right/0.25.1792.1048@0.25.1792.1048" timestamp="1696169427140" />
+    <state width="1750" height="538" key="GridCell.Tab.0.right/0.25.1792.1048@0.25.1792.1048" timestamp="1696949924692" />
     <state width="1750" height="5" key="GridCell.Tab.1.bottom" timestamp="1696943074576">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
@@ -417,23 +419,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/UserHolder.java</url>
-          <line>88</line>
+          <line>91</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/UserHolder.java</url>
-          <line>83</line>
+          <line>86</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/UserHolder.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="22" />
+          <line>96</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/bean-lifecycle/src/main/java/com/zq/bean/lifecycle/UserHolder.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="23" />
+          <line>81</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

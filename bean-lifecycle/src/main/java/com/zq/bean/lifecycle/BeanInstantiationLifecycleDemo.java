@@ -8,6 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * Spring Bean 实例化生命周期
  *
+ * see {@link com.zq.spring.bean.definition.BeanInstantiationDemo }
+ *
  * Spring Bean 实例化前阶段
  *  • 非主流生命周期 - Bean 实例化前阶段
  *  	• InstantiationAwareBeanPostProcessor#postProcessBeforeInstantiation

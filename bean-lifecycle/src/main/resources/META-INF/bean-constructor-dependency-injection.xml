@@ -10,7 +10,7 @@
 
     <bean id="myInstantiationAwareBeanPostProcessor" class="com.zq.bean.lifecycle.MyInstantiationAwareBeanPostProcessor" />
 
-    <bean id="userHolder" class="com.zq.bean.lifecycle.UserHolder" autowire="constructor">
+    <bean id="userHolder" class="com.zq.bean.lifecycle.UserHolder" autowire="constructor" init-method="init">
         <property name="number" value="1"/>
         <!--通过 XML 元素配置-->
         <property name="description" value="The user holder"/>

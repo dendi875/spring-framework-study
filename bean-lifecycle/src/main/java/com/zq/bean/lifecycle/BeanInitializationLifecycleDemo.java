@@ -12,6 +12,12 @@ import org.springframework.context.annotation.CommonAnnotationBeanPostProcessor;
  * 视频：98丨SpringBean初始化前阶段：BeanPostProcessor.mp4
  * PPT：第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
  *
+ * Spring Bean 初始化中阶段 see {@link com.zq.spring.bean.definition.BeanInitializationAndDestroyDemo }
+ * • Bean 初始化（Initialization）
+ * 		• @PostConstruct 标注方法
+ * 		• 实现 InitializingBean 接口的 afterPropertiesSet() 方法
+ * 		• 自定义初始化方法
+ *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-10 21:02:38
  */
