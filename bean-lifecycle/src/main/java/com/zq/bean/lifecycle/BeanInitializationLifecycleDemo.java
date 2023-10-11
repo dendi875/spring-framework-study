@@ -26,6 +26,12 @@ import org.springframework.context.annotation.CommonAnnotationBeanPostProcessor;
  * 视频：100丨SpringBean初始化后阶段：BeanPostProcessor.mp4
  * PPT：第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
  *
+ * Spring Bean 初始化完成阶段
+ * • 方法回调
+ * 		• Spring 4.1 +：SmartInitializingSingleton#afterSingletonsInstantiated
+ * 视频：100丨SpringBean初始化后阶段：BeanPostProcessor.mp4
+ * PPT：第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
+ *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-10 21:02:38
  */
