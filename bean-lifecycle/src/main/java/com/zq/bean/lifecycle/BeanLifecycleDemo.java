@@ -19,13 +19,19 @@ import org.springframework.context.annotation.CommonAnnotationBeanPostProcessor;
  * 		• 实现 DisposableBean 接口的 destroy() 方法
  * 		• 自定义销毁方法
  *
+ * Spring Bean 垃圾收集 see {@link com.zq.spring.bean.definition.BeanGarbageCollectionDemo}
+ * • Bean 垃圾回收（GC）
+ * 		• 关闭 Spring 容器（应用上下文）
+ * 		• 执行 GC
+ * 		• Spring Bean 覆盖的 finalize() 方法被回调
+ *
  *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-11 10:30:18
  */
 public class BeanLifecycleDemo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 		// 添加 BeanPostProcessor 实现 MyInstantiationAwareBeanPostProcessor
 		beanFactory.addBeanPostProcessor(new MyInstantiationAwareBeanPostProcessor());
@@ -59,5 +65,14 @@ public class BeanLifecycleDemo {
 		beanFactory.destroyBean("userHolder", userHolder);
 		// Bean 销毁并不意味着 Bean 垃圾回收了
 		System.out.println(userHolder);
+
+		// 销毁 BeanFactory 中的单例 Bean
+		beanFactory.destroySingletons();
+		// 强制GC
+		System.gc();
+		// 等待一段时间
+		Thread.sleep(1000L);
+		// 再GC
+		System.gc();
 	}
 }
