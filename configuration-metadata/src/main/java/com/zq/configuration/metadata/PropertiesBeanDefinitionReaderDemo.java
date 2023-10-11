@@ -11,14 +11,18 @@ import org.springframework.core.io.support.EncodedResource;
 /**
  *
  * 基于 XML 资源装载 Spring Bean 配置元信息 {@link com.zq.spring.ioc.overview.container.BeanFactoryAsIoCContainerDemo }
- *
+ *	* 底层实现 - XmlBeanDefinitionReader
  *
  *
  * 基于 Properties 资源装载 Spring Bean 配置元信息
  * 	* 底层实现 - PropertiesBeanDefinitionReader
  *
+ * 基于 Java 注解装载 Spring Bean 配置元信息
+ *  * 底层实现 - AnnotatedBeanDefinitionReader
+ *
  * 视频：111丨基于Properties资源装载Spring Bean配置元信息：为什么Spring官方不推荐？.mp4
  * PPT: 第十章 Spring 配置元信息（Configuration Metadata）.pdf---基于 Properties 资源装载 Spring Bean 配置元信息
+ *
  *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-11 16:18:46
