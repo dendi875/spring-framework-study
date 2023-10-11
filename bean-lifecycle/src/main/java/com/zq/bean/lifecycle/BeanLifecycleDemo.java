@@ -13,6 +13,13 @@ import org.springframework.context.annotation.CommonAnnotationBeanPostProcessor;
  * 视频：102丨SpringBean销毁前阶段：DestructionAwareBeanPostProcessor用在怎样的场景.mp4
  * PPT: 第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
  *
+ * Spring Bean 销毁阶段 see {@link com.zq.spring.bean.definition.BeanInitializationAndDestroyDemo }
+ * • Bean 销毁（Destroy）
+ * 		• @PreDestroy 标注方法
+ * 		• 实现 DisposableBean 接口的 destroy() 方法
+ * 		• 自定义销毁方法
+ *
+ *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-11 10:30:18
  */

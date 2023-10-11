@@ -6,12 +6,14 @@ import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.SmartInitializingSingleton;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.Environment;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 /**
  *
@@ -32,7 +34,9 @@ import javax.annotation.PostConstruct;
  * @since  2023-10-10 18:54:41
  */
 public class UserHolder implements BeanNameAware, BeanClassLoaderAware, BeanFactoryAware,
-		EnvironmentAware, InitializingBean, SmartInitializingSingleton {
+		EnvironmentAware,
+		InitializingBean, SmartInitializingSingleton,
+		DisposableBean {
 	private final User user;
 
 	private Integer number;
@@ -124,5 +128,23 @@ public class UserHolder implements BeanNameAware, BeanClassLoaderAware, BeanFact
 	public void afterSingletonsInstantiated() {
 		this.description = "The user holder V8";
 		System.out.println("afterSingletonsInstantiated() = " + description);
+	}
+
+	@PreDestroy
+	public void preDestroy() {
+		this.description = "The user holder V10";
+		System.out.println("preDestroy() = " + description);
+	}
+
+
+	@Override
+	public void destroy() throws Exception {
+		this.description = "The user holder V11";
+		System.out.println("destroy() = " + description);
+	}
+
+	public void doDestroy() throws Exception {
+		this.description = "The user holder V12";
+		System.out.println("doDestroy() = " + description);
 	}
 }
