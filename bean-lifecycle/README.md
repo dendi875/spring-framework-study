@@ -8,7 +8,7 @@
 
 6. Spring Bean 实例化前阶段 
 7. Spring Bean 实例化阶段 
-8. Spring Bean 实例化后阶段 
+8. Spring Bean 实例化后阶段
 
 9. Spring Bean 属性赋值前阶段 
 
@@ -23,3 +23,20 @@
 16. Spring Bean 销毁阶段 
 
 17. Spring Bean 垃圾收集
+
+### BeanFactory 是怎样处理 Bean 生命周期？
+BeanFactory 的默认实现为 DefaultListableBeanFactory，其中 Bean生命周期与方法映射如下：
+* BeanDefinition 注册阶段 - registerBeanDefinition
+* BeanDefinition 合并阶段 - getMergedBeanDefinition
+* Bean 实例化前阶段 - resolveBeforeInstantiation
+* Bean 实例化阶段 - createBeanInstance
+* Bean 实例化后阶段 - populateBean
+* Bean 属性赋值前阶段 - populateBean
+* Bean 属性赋值阶段 - populateBean
+* Bean Aware 接口回调阶段 - initializeBean
+* Bean 初始化前阶段 - initializeBean
+* Bean 初始化阶段 - initializeBean
+* Bean 初始化后阶段 - initializeBean
+* Bean 初始化完成阶段 - preInstantiateSingletons
+* Bean 销毁前阶段 - destroyBean
+* Bean 销毁阶段 - destroyBean

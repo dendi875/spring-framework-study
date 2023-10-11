@@ -16,6 +16,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /**
+ * 包含：Spring Bean Aware接口回调、初始化中、初始化完成、销毁中、GC 阶段的示例
  *
  * Spring Bean Aware接口回调阶段
  * • Spring Aware 接口
@@ -81,10 +82,10 @@ public class UserHolder implements BeanNameAware, BeanClassLoaderAware, BeanFact
 				'}';
 	}
 
-
+	///////////////////// Spring Bean Aware接口回调阶段 //////////////////
 	@Override
-	public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-		this.beanFactory = beanFactory;
+	public void setBeanName(String name) {
+		this.name = name;
 	}
 
 	@Override
@@ -93,8 +94,8 @@ public class UserHolder implements BeanNameAware, BeanClassLoaderAware, BeanFact
 	}
 
 	@Override
-	public void setBeanName(String name) {
-		this.name = name;
+	public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+		this.beanFactory = beanFactory;
 	}
 
 	@Override
@@ -102,6 +103,7 @@ public class UserHolder implements BeanNameAware, BeanClassLoaderAware, BeanFact
 		this.environment = environment;
 	}
 
+	///////////////////// Spring Bean 初始化中阶段 //////////////////
 	@PostConstruct
 	public void initPostConstruct() {
 		// MyInstantiationAwareBeanPostProcessor#postProcessBeforeInitialization v3 => initPostConstruct v4
@@ -124,12 +126,14 @@ public class UserHolder implements BeanNameAware, BeanClassLoaderAware, BeanFact
 		System.out.println("init() = " + description);
 	}
 
+	///////////////////// Spring Bean 初始化完成阶段 //////////////////
 	@Override
 	public void afterSingletonsInstantiated() {
 		this.description = "The user holder V8";
 		System.out.println("afterSingletonsInstantiated() = " + description);
 	}
 
+	///////////////////// Spring Bean 销毁中阶段 //////////////////
 	@PreDestroy
 	public void preDestroy() {
 		this.description = "The user holder V10";
@@ -148,6 +152,7 @@ public class UserHolder implements BeanNameAware, BeanClassLoaderAware, BeanFact
 		System.out.println("doDestroy() = " + description);
 	}
 
+	///////////////////// Spring Bean GC 阶段 /////////////////////
 	protected void finalize() throws Throwable {
 		System.out.println("The UserHolder is finalized...");
 	}

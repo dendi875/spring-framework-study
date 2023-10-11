@@ -31,8 +31,7 @@ class MyInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPos
 		return true;
 	}
 
-	// 在实例化之后和赋值中间还有一个阶段，也就是在赋值前阶段有个回调，我们称之为赋值前的一个生命周期
-
+	// 在实例化之后和赋值中间还有一个阶段，也就是在赋值前阶段有个回调，我们称之为属性赋值前的一个生命周期
 	// user 是跳过 Bean 属性赋值（填入）
 	// superUser 也是完全跳过 Bean 实例化（Bean 属性赋值（填入））
 	// userHolder 对属性值进行拦截修改

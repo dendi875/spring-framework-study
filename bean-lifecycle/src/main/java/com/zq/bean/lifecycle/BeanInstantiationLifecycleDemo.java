@@ -13,7 +13,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Spring Bean 实例化前阶段
  *  • 非主流生命周期 - Bean 实例化前阶段
  *  	• InstantiationAwareBeanPostProcessor#postProcessBeforeInstantiation
- *
  *  视频：93丨SpringBean实例化前阶段：Bean的实例化能否被绕开？.mp4
  *  PPT: 第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
  *
@@ -37,7 +36,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * • Bean 属性赋值前回调
  * 		• Spring 1.2 - 5.0：InstantiationAwareBeanPostProcessor#postProcessPropertyValues
  * 		• Spring 5.1：      InstantiationAwareBeanPostProcessor#postProcessProperties
- *
  * 视频：96丨SpringBean属性赋值前阶段：配置后的PropertyValues还有机会修改吗？.mp4
  * PPT: 第九章 Spring Bean生命周期（Beans Lifecycle）.pdf
  *

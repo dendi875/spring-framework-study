@@ -5,6 +5,7 @@ import org.springframework.beans.factory.config.DestructionAwareBeanPostProcesso
 import org.springframework.util.ObjectUtils;
 
 /**
+ * Spring Bean 销毁前阶段示例
  *
  *{@link DestructionAwareBeanPostProcessor } 实现
  *
