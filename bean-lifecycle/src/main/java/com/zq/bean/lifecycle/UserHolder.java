@@ -36,8 +36,10 @@ import javax.annotation.PreDestroy;
  */
 public class UserHolder implements BeanNameAware, BeanClassLoaderAware, BeanFactoryAware,
 		EnvironmentAware,
-		InitializingBean, SmartInitializingSingleton,
-		DisposableBean {
+		InitializingBean, // 初始化时阶段
+		SmartInitializingSingleton, // 初始化完成阶段
+		DisposableBean // 销毁时阶段
+{
 	private final User user;
 
 	private Integer number;
