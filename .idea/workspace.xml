@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba24da9-ea57-4763-9c7d-67756aaaa794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resource/src/main/java/com/zq/resource/CustomizedResourcePatternResolverDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/src/main/java/com/zq/resource/util/ResourceUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/src/main/java/com/zq/resource/InjectingResourceDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/src/main/resources/META-INF/default.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/src/main/resources/META-INF/production.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +17,8 @@
       <list>
         <option value="Enum" />
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -95,7 +96,7 @@
       <recent name="com.zq.spring.ioc.overview.annotation" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CustomizedResourcePatternResolverDemo">
+  <component name="RunManager" selected="Application.InjectingResourceDemo">
     <configuration name="AnnotatedYamlPropertySourceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zq.configuration.metadata.AnnotatedYamlPropertySourceDemo" />
       <module name="configuration-metadata" />
@@ -148,12 +149,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="XmlBasedYamlPropertySourceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zq.configuration.metadata.XmlBasedYamlPropertySourceDemo" />
-      <module name="configuration-metadata" />
+    <configuration name="InjectingResourceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zq.resource.InjectingResourceDemo" />
+      <module name="resource" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zq.configuration.metadata.*" />
+          <option name="PATTERN" value="com.zq.resource.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -176,19 +177,19 @@
     </configuration>
     <list>
       <item itemvalue="Remote.Debug Tomcat" />
-      <item itemvalue="Application.XmlBasedYamlPropertySourceDemo" />
       <item itemvalue="Application.AnnotatedYamlPropertySourceDemo" />
       <item itemvalue="Application.EncodeFileSystemResourceDemo" />
       <item itemvalue="Application.EncodeFileSystemResourceLoaderDemo" />
       <item itemvalue="Application.CustomizedResourcePatternResolverDemo" />
+      <item itemvalue="Application.InjectingResourceDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.InjectingResourceDemo" />
         <item itemvalue="Application.CustomizedResourcePatternResolverDemo" />
         <item itemvalue="Application.EncodeFileSystemResourceLoaderDemo" />
         <item itemvalue="Application.EncodeFileSystemResourceDemo" />
         <item itemvalue="Application.AnnotatedYamlPropertySourceDemo" />
-        <item itemvalue="Application.XmlBasedYamlPropertySourceDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -218,11 +219,11 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1375" y="-559" key="#Project_Structure" timestamp="1697169426973">
+    <state x="-1375" y="-559" key="#Project_Structure" timestamp="1697181582095">
       <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state x="-1375" y="-432" key="#Project_Structure/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693796995669" />
-    <state x="-1375" y="-559" key="#Project_Structure/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697169426973" />
+    <state x="-1375" y="-559" key="#Project_Structure/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697181582095" />
     <state x="509" y="217" key="#Project_Structure/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697010026316" />
     <state x="509" y="217" key="#Project_Structure/0.25.1792.1048@0.25.1792.1048" timestamp="1696169135666" />
     <state x="-1227" y="-574" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1696645797141">
@@ -258,42 +259,42 @@
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state x="659" y="256" key="#xdebugger.evaluate/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696823045910" />
-    <state width="1878" height="162" key="GridCell.Tab.0.bottom" timestamp="1697180070936">
-      <screen x="-1920" y="-752" width="1920" height="1055" />
+    <state width="1750" height="349" key="GridCell.Tab.0.bottom" timestamp="1697205610202">
+      <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126415" />
     <state width="1750" height="272" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781275" />
     <state width="1750" height="2" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="162" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697180070936" />
     <state width="1750" height="203" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697117047227" />
-    <state width="1750" height="203" key="GridCell.Tab.0.bottom/0.25.1792.1048@0.25.1792.1048" timestamp="1697161626615" />
-    <state width="1878" height="162" key="GridCell.Tab.0.center" timestamp="1697180070936">
-      <screen x="-1920" y="-752" width="1920" height="1055" />
+    <state width="1750" height="349" key="GridCell.Tab.0.bottom/0.25.1792.1048@0.25.1792.1048" timestamp="1697205610202" />
+    <state width="1750" height="349" key="GridCell.Tab.0.center" timestamp="1697205610201">
+      <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
     <state width="1750" height="272" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781274" />
     <state width="1750" height="2" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="162" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697180070936" />
     <state width="1750" height="203" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697117047226" />
-    <state width="1750" height="203" key="GridCell.Tab.0.center/0.25.1792.1048@0.25.1792.1048" timestamp="1697161626612" />
-    <state width="1878" height="162" key="GridCell.Tab.0.left" timestamp="1697180070936">
-      <screen x="-1920" y="-752" width="1920" height="1055" />
+    <state width="1750" height="349" key="GridCell.Tab.0.center/0.25.1792.1048@0.25.1792.1048" timestamp="1697205610201" />
+    <state width="1750" height="349" key="GridCell.Tab.0.left" timestamp="1697205610201">
+      <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
     <state width="1750" height="272" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781274" />
     <state width="1750" height="2" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695069" />
     <state width="1878" height="162" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697180070936" />
     <state width="1750" height="203" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697117047226" />
-    <state width="1750" height="203" key="GridCell.Tab.0.left/0.25.1792.1048@0.25.1792.1048" timestamp="1697161626611" />
-    <state width="1878" height="162" key="GridCell.Tab.0.right" timestamp="1697180070936">
-      <screen x="-1920" y="-752" width="1920" height="1055" />
+    <state width="1750" height="349" key="GridCell.Tab.0.left/0.25.1792.1048@0.25.1792.1048" timestamp="1697205610201" />
+    <state width="1750" height="349" key="GridCell.Tab.0.right" timestamp="1697205610202">
+      <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126414" />
     <state width="1750" height="272" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781275" />
     <state width="1750" height="2" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="162" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697180070936" />
     <state width="1750" height="203" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697117047227" />
-    <state width="1750" height="203" key="GridCell.Tab.0.right/0.25.1792.1048@0.25.1792.1048" timestamp="1697161626613" />
+    <state width="1750" height="349" key="GridCell.Tab.0.right/0.25.1792.1048@0.25.1792.1048" timestamp="1697205610202" />
     <state width="1878" height="162" key="GridCell.Tab.1.bottom" timestamp="1697180070938">
       <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
@@ -355,13 +356,13 @@
     </state>
     <state x="-1790" y="-752" width="1371" height="1008" key="dock-window-1/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697079052479" />
     <state x="130" y="65" width="1371" height="1008" key="dock-window-1/0.25.1792.1048@0.25.1792.1048" timestamp="1697034932477" />
-    <state x="559" y="306" width="860" height="725" key="find.popup" timestamp="1697115370934">
+    <state x="559" y="306" width="867" height="486" key="find.popup" timestamp="1697205795027">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state x="559" y="306" width="859" height="486" key="find.popup/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694679208377" />
     <state x="-1321" y="-469" width="921" height="729" key="find.popup/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696657232104" />
     <state x="559" y="306" width="860" height="725" key="find.popup/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697115370934" />
-    <state x="559" y="306" width="859" height="486" key="find.popup/0.25.1792.1048@0.25.1792.1048" timestamp="1696131493685" />
+    <state x="559" y="306" width="867" height="486" key="find.popup/0.25.1792.1048@0.25.1792.1048" timestamp="1697205795027" />
     <state x="-1278" y="-505" key="new project wizard" timestamp="1697169348042">
       <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
