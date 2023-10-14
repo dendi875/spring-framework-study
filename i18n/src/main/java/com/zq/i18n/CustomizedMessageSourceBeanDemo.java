@@ -12,18 +12,16 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 
 /**
- *
  * 视频：141丨课外资料：SpringBoot为什么要新建MessageSource Bean？.mp4
  * PPT: 第十二章 Spring 国际化（i18n）.pdf
- *
+ * <p>
  * Spring Boot 场景下自定义 {@link MessageSource} Bean
  *
- * @see MessageSource
- * @see {@link AbstractApplicationContext#initMessageSource()}
- * @see MessageSourceAutoConfiguration
- *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
- * @since  2023-10-14 19:53:35
+ * @see MessageSource
+ * @see AbstractApplicationContext#initMessageSource
+ * @see MessageSourceAutoConfiguration
+ * @since 2023-10-14 19:53:35
  */
 @EnableAutoConfiguration
 public class CustomizedMessageSourceBeanDemo { // @Configuration Class
