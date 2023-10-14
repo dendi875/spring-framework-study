@@ -8,8 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="dependency-injection" />
         <module name="spring-bean" />
-        <module name="dependency-source" />
+        <module name="i18n" />
         <module name="ioc-container-overview" />
+        <module name="dependency-source" />
         <module name="dependency-lookup" />
         <module name="configuration-metadata" />
         <module name="resource" />
