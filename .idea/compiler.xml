@@ -10,6 +10,7 @@
         <module name="spring-bean" />
         <module name="i18n" />
         <module name="ioc-container-overview" />
+        <module name="validation" />
         <module name="dependency-source" />
         <module name="dependency-lookup" />
         <module name="configuration-metadata" />
