@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba24da9-ea57-4763-9c7d-67756aaaa794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/validation/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validation/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validation/src/main/java/com/zq/validation/ErrorsMessageDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validation/src/main/java/com/zq/validation/ValidationDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validation/src/main/java/com/zq/validation/ErrorsMessageDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/validation/src/main/java/com/zq/validation/ErrorsMessageDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +97,7 @@
       <recent name="com.zq.spring.ioc.overview.annotation" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ErrorsMessageDemo">
+  <component name="RunManager" selected="Application.ValidationDemo">
     <configuration name="CustomizedMessageSourceBeanDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zq.i18n.CustomizedMessageSourceBeanDemo" />
       <module name="i18n" />
@@ -140,13 +137,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Handler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zq.resource.springx.Handler" />
-      <module name="resource" />
-      <option name="VM_PARAMETERS" value="-Djava.protocol.handler.pkgs=com.zq.resource" />
+    <configuration name="MessageFormatDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zq.i18n.MessageFormatDemo" />
+      <module name="i18n" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zq.resource.springx.*" />
+          <option name="PATTERN" value="com.zq.i18n.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -154,12 +150,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageFormatDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zq.i18n.MessageFormatDemo" />
-      <module name="i18n" />
+    <configuration name="ValidationDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zq.validation.ValidationDemo" />
+      <module name="validation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zq.i18n.*" />
+          <option name="PATTERN" value="com.zq.validation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -181,20 +177,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Handler" />
       <item itemvalue="Application.MessageFormatDemo" />
       <item itemvalue="Remote.Debug Tomcat" />
       <item itemvalue="Application.CustomizedMessageSourceBeanDemo" />
       <item itemvalue="Application.DynamicResourceMessageSource" />
       <item itemvalue="Application.ErrorsMessageDemo" />
+      <item itemvalue="Application.ValidationDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ValidationDemo" />
         <item itemvalue="Application.ErrorsMessageDemo" />
         <item itemvalue="Application.DynamicResourceMessageSource" />
         <item itemvalue="Application.CustomizedMessageSourceBeanDemo" />
         <item itemvalue="Application.MessageFormatDemo" />
-        <item itemvalue="Application.Handler" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +216,7 @@
       <workItem from="1696041014032" duration="48690000" />
       <workItem from="1696683187820" duration="8022000" />
       <workItem from="1696935901005" duration="25385000" />
-      <workItem from="1697279811385" duration="9828000" />
+      <workItem from="1697279811385" duration="11061000" />
     </task>
     <servers />
   </component>
@@ -244,14 +240,14 @@
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state x="464" y="356" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694597086944" />
-    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1697290955737">
+    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1697342038355">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state x="-1147" y="-410" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693830933296" />
     <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694612153345" />
     <state x="-1147" y="-537" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697180031728" />
     <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697116361940" />
-    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048@0.25.1792.1048" timestamp="1697290955737" />
+    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048@0.25.1792.1048" timestamp="1697342038355" />
     <state x="636" y="478" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1696941593415">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
@@ -268,7 +264,7 @@
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state x="659" y="256" key="#xdebugger.evaluate/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696823045910" />
-    <state width="1750" height="229" key="GridCell.Tab.0.bottom" timestamp="1697341156307">
+    <state width="1750" height="229" key="GridCell.Tab.0.bottom" timestamp="1697342616898">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126415" />
@@ -276,8 +272,8 @@
     <state width="1750" height="2" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="162" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697180070936" />
     <state width="1750" height="203" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697117047227" />
-    <state width="1750" height="229" key="GridCell.Tab.0.bottom/0.25.1792.1048@0.25.1792.1048" timestamp="1697341156307" />
-    <state width="1750" height="229" key="GridCell.Tab.0.center" timestamp="1697341156306">
+    <state width="1750" height="229" key="GridCell.Tab.0.bottom/0.25.1792.1048@0.25.1792.1048" timestamp="1697342616898" />
+    <state width="1750" height="229" key="GridCell.Tab.0.center" timestamp="1697342616897">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
@@ -285,8 +281,8 @@
     <state width="1750" height="2" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="162" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697180070936" />
     <state width="1750" height="203" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697117047226" />
-    <state width="1750" height="229" key="GridCell.Tab.0.center/0.25.1792.1048@0.25.1792.1048" timestamp="1697341156306" />
-    <state width="1750" height="229" key="GridCell.Tab.0.left" timestamp="1697341156305">
+    <state width="1750" height="229" key="GridCell.Tab.0.center/0.25.1792.1048@0.25.1792.1048" timestamp="1697342616897" />
+    <state width="1750" height="229" key="GridCell.Tab.0.left" timestamp="1697342616896">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
@@ -294,8 +290,8 @@
     <state width="1750" height="2" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695069" />
     <state width="1878" height="162" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697180070936" />
     <state width="1750" height="203" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697117047226" />
-    <state width="1750" height="229" key="GridCell.Tab.0.left/0.25.1792.1048@0.25.1792.1048" timestamp="1697341156305" />
-    <state width="1750" height="229" key="GridCell.Tab.0.right" timestamp="1697341156306">
+    <state width="1750" height="229" key="GridCell.Tab.0.left/0.25.1792.1048@0.25.1792.1048" timestamp="1697342616896" />
+    <state width="1750" height="229" key="GridCell.Tab.0.right" timestamp="1697342616897">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126414" />
@@ -303,7 +299,7 @@
     <state width="1750" height="2" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="162" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697180070936" />
     <state width="1750" height="203" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697117047227" />
-    <state width="1750" height="229" key="GridCell.Tab.0.right/0.25.1792.1048@0.25.1792.1048" timestamp="1697341156306" />
+    <state width="1750" height="229" key="GridCell.Tab.0.right/0.25.1792.1048@0.25.1792.1048" timestamp="1697342616897" />
     <state width="1750" height="264" key="GridCell.Tab.1.bottom" timestamp="1697293459627">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>

@@ -57,7 +57,7 @@ public class ErrorsMessageDemo {
 		}
 	}
 
-	private static MessageSource createMessageSource() {
+	 static MessageSource createMessageSource() {
 		StaticMessageSource messageSource = new StaticMessageSource();
 		messageSource.addMessage("user.properties.not.null", Locale.getDefault(), "User 所有属性不能为空");
 		messageSource.addMessage("id.required", Locale.getDefault(), "the id of User must not be null.");
