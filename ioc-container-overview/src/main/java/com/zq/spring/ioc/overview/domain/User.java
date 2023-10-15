@@ -23,6 +23,8 @@ public class User implements BeanNameAware {
 
 	private Resource configFileLocation;
 
+	private Company company;
+
 	/**
 	 * 当前 Bean名称
 	 */
@@ -50,6 +52,14 @@ public class User implements BeanNameAware {
 
 	public void setCity(City city) {
 		this.city = city;
+	}
+
+	public Company getCompany() {
+		return company;
+	}
+
+	public void setCompany(Company company) {
+		this.company = company;
 	}
 
 	public Resource getConfigFileLocation() {
@@ -85,6 +95,8 @@ public class User implements BeanNameAware {
 				", workCities=" + Arrays.toString(workCities) +
 				", lifeCities=" + lifeCities +
 				", configFileLocation=" + configFileLocation +
+				", company=" + company +
+				", beanName='" + beanName + '\'' +
 				'}';
 	}
 
