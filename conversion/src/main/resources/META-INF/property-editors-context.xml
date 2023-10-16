@@ -14,6 +14,19 @@
     <!-- 将其声明为 Spring Bean -->
     <bean class="com.zq.conversion.CustomizedPropertyEditorRegistrar"/>
 
+    <!-- 声明 ConversionServiceFactoryBean 并且 name 必须为 "conversionService" -->
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <bean class="com.zq.conversion.PropertiesToStringConverter"/>
+        </property>
+    </bean>
+
+    <!-- java.util.Properties -->
+    <util:properties id="context">
+        <prop key="id">1</prop>
+        <prop key="name">zhangsan</prop>
+    </util:properties>
+
     <bean id="user" class="com.zq.spring.ioc.overview.domain.User">
         <property name="id" value="1"/>
         <property name="name" value="张三"/>
@@ -23,6 +36,7 @@
                 name = zhangsan
             </value>
         </property>
+        <property name="contentAsText" ref="context" /> <!--从 Properties 类型转为 String 类型-->
     </bean>
 
 </beans>

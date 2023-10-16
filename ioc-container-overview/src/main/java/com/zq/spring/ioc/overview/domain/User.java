@@ -26,7 +26,9 @@ public class User implements BeanNameAware {
 
 	private Company company;
 
-	private Properties context;
+	private Properties context; // 类型转换，把 String 转换为 Properties
+
+	private String contentAsText; // 类型转换，把 Properties 转换为 String
 
 	/**
 	 * 当前 Bean名称
@@ -73,6 +75,14 @@ public class User implements BeanNameAware {
 		this.context = context;
 	}
 
+	public String getContentAsText() {
+		return contentAsText;
+	}
+
+	public void setContentAsText(String contentAsText) {
+		this.contentAsText = contentAsText;
+	}
+
 	public Resource getConfigFileLocation() {
 		return configFileLocation;
 	}
@@ -108,6 +118,7 @@ public class User implements BeanNameAware {
 				", configFileLocation=" + configFileLocation +
 				", company=" + company +
 				", context=" + context +
+				", contentAsText='" + contentAsText + '\'' +
 				", beanName='" + beanName + '\'' +
 				'}';
 	}
