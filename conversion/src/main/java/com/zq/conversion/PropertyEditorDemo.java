@@ -28,5 +28,6 @@ public class PropertyEditorDemo {
 		propertyEditor.setAsText(name);
 
 		System.out.println(propertyEditor.getValue());
+		System.out.println(propertyEditor.getAsText());
 	}
 }
