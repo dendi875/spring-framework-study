@@ -84,7 +84,4 @@ public class GenericTypeResolverDemo {
 		System.out.printf("GenericTypeResolver.resolveReturnTypeArgument(%s,%s) = %s\n", methodName, containingClass.getSimpleName(), returnTypeArgument);
 	}
 
-	static class StringList extends ArrayList<String> { // 需要泛型参数类型具体化，这样字节码中才有记录
-
-	}
 }
