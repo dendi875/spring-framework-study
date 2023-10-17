@@ -1,7 +1,9 @@
 package com.zq.conversion;
 
 import com.zq.spring.ioc.overview.domain.User;
+import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.beans.PropertyEditor;
@@ -32,6 +34,22 @@ public class SpringCustomizedPropertyEditorDemo {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:/META-INF/property-editors-context.xml");
 
+		// ApplicationContext 在创建的时候 AbstractApplicationContext 会去查找一个名为 "conversionService" 的 Bean
+		// 它把这个 "conversionService" 的 Bean 传递到 BeanFactory 中到 AbstractBeanFactory 中
+		// AbstractBeanFactory#getConversionService 把 "conversionService" 的 Bean 传到 BeanDefinition 中
+		// Bean 在创建的时候它是一个 BeanDefinition，然后把 BeanDefinition 变成一个 BeanWrapper
+		// 在 BeanWrapper 中它涉及到参数的转换，比如说 PropertyValues ，这就是它的数据来源，它转换时会用到 setPropertyValues(PropertyValues) 这个方法
+		// setPropertyValues 方法中调用 TypeConverter 的实现，也就是调用 TypeConverter#convertIfNecessary
+		// TypeConverter#convertIfNecessary 调用 TypeConverterDelegate#convertIfNecessary
+		// TypeConverterDelegate#convertIfNecessary 调用 PropertyEditor 或者 ConversionService
+
+		// AbstractApplicationContext -> "conversionService" ConversionService Bean
+		// -> ConfigurableBeanFactory#setConversionService(ConversionService)
+		// -> AbstractAutowireCapableBeanFactory.instantiateBean
+		// -> AbstractBeanFactory#getConversionService ->
+		// BeanDefinition -> BeanWrapper -> 属性转换（数据来源：PropertyValues）->
+		// setPropertyValues(PropertyValues) -> TypeConverter#convertIfNecessnary
+		// TypeConverterDelegate#convertIfNecessnary  -> PropertyEditor or ConversionService
 
 		User user = applicationContext.getBean("user", User.class);
 
