@@ -25,7 +25,9 @@ import org.springframework.context.annotation.ComponentScan;
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-19 19:03:14
  */
-@ComponentScan(basePackages = "com.zq.annotation") // 指定扫描的 Class-Path
+// @ComponentScan(value = "com.zq.annotation") // 指定扫描的 Class-Path
+// @MyComponentScan(scanBasePackages = "com.zq.annotation")
+@MyComponentScan2(basePackages = "com.zq.annotation")
 public class ComponentScanDemo {
 
 	public static void main(String[] args) {
