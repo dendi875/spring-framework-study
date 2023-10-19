@@ -1,5 +1,7 @@
 package com.zq.event;
 
+import org.springframework.context.ApplicationEvent;
+import org.springframework.context.ApplicationListener;
 import org.springframework.context.support.GenericApplicationContext;
 
 /**
@@ -19,13 +21,25 @@ public class CustomizedSpringEventDemo {
 		GenericApplicationContext applicationContext = new GenericApplicationContext();
 
 		// 1. 注册自定义Spring事件监听器
+		// AbstractApplicationEventMulticaster.ListenerRetriever 会处理
+		// 0个或1个或多个 ApplicationListener<MySpringEvent> 实例
+		// 会处理 MySpringEvent 以及它的子类
 		applicationContext.addApplicationListener(new MySpringEventListener());
+
+		// 这种方式它会处理所有的事件
+		applicationContext.addApplicationListener(new ApplicationListener<ApplicationEvent>() {
+			@Override
+			public void onApplicationEvent(ApplicationEvent event) {
+				System.out.println("Event: " + event);
+			}
+		});
 
 		// 2. 启动 Spring 上下文
 		applicationContext.refresh();
 
 		// 3. 发布自定义事件
 		applicationContext.publishEvent(new MySpringEvent("Hello, World"));
+		applicationContext.publishEvent(new MySpringEvent2("2023"));
 
 		// 4. 关闭 Spring 应用上下文
 		applicationContext.close();
