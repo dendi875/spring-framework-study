@@ -1,5 +1,6 @@
 package com.zq.event;
 
+import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ApplicationEventMulticaster;
 import org.springframework.context.event.ContextClosedEvent;
@@ -25,6 +26,18 @@ import java.util.concurrent.Executors;
  * 			• 异步模式：如 java.util.concurrent.ThreadPoolExecutor
  * • 设计缺陷：非基于接口契约编程
  *
+ *
+ * 视频：198丨Spring4.1事件异常处理：ErrorHandler使用有怎样的限制？.mp4
+ * PPT: 第十七章 Spring 事件（Events）.pdf
+ *
+ * Spring 4.1 事件异常处理
+ * • Spring 3.0 错误处理接口 - org.springframework.util.ErrorHandler
+ * • 使用场景
+ * 		• Spring 事件（Events）
+ * 			• SimpleApplicationEventMulticaster Spring 4.1 开始支持
+ * 		• Spring 本地调度（Scheduling）
+ * 			• org.springframework.scheduling.concurrent.ConcurrentTaskScheduler
+ * 			• org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-19 15:02:24
  */
@@ -64,8 +77,21 @@ public class AsyncEventHandlerDemo {
 					}
 				}
 			});
+
+			// 添加事件监听器处理事件过程中的异常处理器
+			simpleApplicationEventMulticaster.setErrorHandler((t) -> {
+				System.err.println("Spring 监听器在处理事件时发生了异常，原因：" + t.getMessage());
+			});
 		}
 
+		// 添加事件监听器，模拟处理事件时发生了异常
+		applicationContext.addApplicationListener(new ApplicationListener<MySpringEvent>() {
+
+			@Override
+			public void onApplicationEvent(MySpringEvent event) {
+				throw new RuntimeException("故意抛出异常");
+			}
+		});
 
 		// 发布 Spring 自定义事件
 		applicationContext.publishEvent(new MySpringEvent("Hello, AsyncSpringEvent"));
