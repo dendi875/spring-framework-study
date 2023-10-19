@@ -32,5 +32,5 @@ public @interface MyComponentScan {
 
 	//@AliasFor(annotation = ComponentScan.class, attribute = "basePackages")
 	@AliasFor(annotation = ComponentScan.class, value = "basePackages")
-	String[] scanBasePackages() default {};
+	String[] scanBasePackages() default {"#"}; // 特意加一个 # 号来说明被子注解 @MyComponentScan2 进行了属性覆盖
 }

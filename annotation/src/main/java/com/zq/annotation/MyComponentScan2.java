@@ -32,4 +32,16 @@ public @interface MyComponentScan2 {
 
 	@AliasFor(annotation = MyComponentScan.class, value = "scanBasePackages") // 隐性别名
 	String[] basePackages() default {};
+
+	// 与元（父）注解有相同的属性 scanBasePackages，所以它隐式的覆盖了元注解的属性，类似子类继承了父类然后覆盖了父类的方法
+	String[] scanBasePackages() default {};
+
+	// 1. 注解 MyComponentScan2.packages  AliasFor MyComponentScan2.scanBasePackages，
+	// 那么 MyComponentScan2.packages 就覆盖了 MyComponentScan2.scanBasePackages 属性
+	// 2. MyComponentScan 注解中也有 scanBasePackages 属性
+	// 那么 MyComponentScan2.packages 也会覆盖 @MyComponentScan.scanBasePackages 属性
+	// 所以 MyComponentScan2.packages 即覆盖了同注解中的 MyComponentScan2.scanBasePackages 属性
+	// 又覆盖了元注解（父注解）中的 @MyComponentScan.scanBasePackages 属性
+	@AliasFor("scanBasePackages")
+	String[] packages() default {};
 }
