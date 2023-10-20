@@ -50,6 +50,9 @@ public class InjectionEnvironmentDemo implements EnvironmentAware, ApplicationCo
 
 		// 注入的对象是不是相等的，是不是同一个对象，是不是一个单例对象，是不是和 context 里面的 environment 是同一个
 		System.out.println(injectionEnvironmentDemo.environment == injectionEnvironmentDemo.environment2);
+
+		// 源码：ApplicationContext 中的和注入的 Environment 是同一个,
+		// AbstractApplication#prepareBeanFactory, ApplicationContextAwareProcessor#invokeAwareInterfaces
 		System.out.println(injectionEnvironmentDemo.environment == context.getEnvironment());
 		System.out.println(injectionEnvironmentDemo.environment == injectionEnvironmentDemo.applicationContext.getEnvironment());
 		System.out.println(injectionEnvironmentDemo.environment == injectionEnvironmentDemo.applicationContext2.getEnvironment());
