@@ -47,8 +47,13 @@ public class ProfileDemo {
 		ConfigurableEnvironment environment = applicationContext.getEnvironment();
 		// 我们可以设置一个默认或者兜底的 profiles
 		environment.setDefaultProfiles("odd");
+
 		// 还可以设置一个活跃的 profiles
-		environment.setActiveProfiles("even");
+		// environment.setActiveProfiles("even");
+		// 活跃的 profile 可以通过启动参数来设置
+		// --spring.profiles.active=even 这是在 Spring Boot 里在IDEA Program arguments: 中添加
+		// -Dspring.profiles.active=even 这是在 Spring Framework 里在 IDEA 中的 VM options: 中添加
+
 
 		// 启动 Spring 上下文
 		applicationContext.refresh();
