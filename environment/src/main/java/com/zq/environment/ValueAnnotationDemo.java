@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * 视频：223丨Spring类型转换在@Value中的运用.mp4
+ * 视频：221丨依赖注入@Value.mp4
  * PPT: 第十九章 Spring Environment 抽象（Environment Abstraction）.pdf
  *
  * 依赖注入 @Value
