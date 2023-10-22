@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 
 /**
  *
- * 视频：08丨Java AOP代理模式（Proxy）：Java静态代理和动态代理的区别是什么？.mp4
+ * 视频：09丨Java AOP判断模式（Predicate）：如何筛选Join Point？.mp4
  * PPT:  第一章 - Spring AOP 总览.pdf
  *
  * 通过Java反射API来判断和过滤目标对象的方法或类

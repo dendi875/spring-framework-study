@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba24da9-ea57-4763-9c7d-67756aaaa794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/aop-overview/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/predicate/TargetFilterDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/proxy/DefaultEchoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/proxy/EchoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/proxy/JdkDynamicProxyDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/proxy/ProxyEchoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/proxy/StaticProxyDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/interceptor/AfterReturnInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/interceptor/AopInterceptorDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/interceptor/AopInterceptorOriginDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/interceptor/BeforeInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/interceptor/ExceptionInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/interceptor/FinallyInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/predicate/TargetFilterDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/predicate/TargetFilterDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +39,8 @@
         <option value="Enum" />
         <option value="FxmlFile" />
         <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -113,11 +113,11 @@
       <recent name="$PROJECT_DIR$/spring-bean" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zq.aop.overview.interceptor" />
       <recent name="com.zq.annotation" />
       <recent name="com.zq.event" />
       <recent name="com.zq.resource" />
       <recent name="com.zq.dependency.injection" />
-      <recent name="com.zq.spring.bean.definition" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zq.questions" />
@@ -125,13 +125,13 @@
       <recent name="com.zq.spring.ioc.overview.annotation" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TargetFilterDemo">
-    <configuration name="ClassLoadingDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zq.aop.overview.ClassLoadingDemo" />
+  <component name="RunManager" selected="Application.AopInterceptorDemo">
+    <configuration name="AopInterceptorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zq.aop.overview.interceptor.AopInterceptorDemo" />
       <module name="aop-overview" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zq.aop.overview.*" />
+          <option name="PATTERN" value="com.zq.aop.overview.interceptor.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -205,20 +205,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Remote.Debug Tomcat" />
-      <item itemvalue="Application.ClassLoadingDemo" />
       <item itemvalue="Application.StaticProxyDemo" />
       <item itemvalue="Application.StaticProxyDemo (1)" />
       <item itemvalue="Application.JdkDynamicProxyDemo" />
       <item itemvalue="Application.TargetFilterDemo" />
+      <item itemvalue="Application.AopInterceptorDemo" />
+      <item itemvalue="Remote.Debug Tomcat" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AopInterceptorDemo" />
         <item itemvalue="Application.TargetFilterDemo" />
         <item itemvalue="Application.JdkDynamicProxyDemo" />
         <item itemvalue="Application.StaticProxyDemo (1)" />
         <item itemvalue="Application.StaticProxyDemo" />
-        <item itemvalue="Application.ClassLoadingDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -249,7 +249,8 @@
       <workItem from="1697632740280" duration="5224000" />
       <workItem from="1697686476703" duration="19585000" />
       <workItem from="1697719106239" duration="43803000" />
-      <workItem from="1697878994139" duration="12459000" />
+      <workItem from="1697878994139" duration="14120000" />
+      <workItem from="1697968868103" duration="484000" />
     </task>
     <servers />
   </component>
@@ -275,14 +276,14 @@
     </state>
     <state x="464" y="356" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694597086944" />
     <state x="464" y="356" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697424626085" />
-    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1697966637782">
+    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1697969120796">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state x="-1147" y="-410" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693830933296" />
     <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694612153345" />
     <state x="-1147" y="-537" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697807189338" />
     <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697780871393" />
-    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048@0.25.1792.1048" timestamp="1697966637782" />
+    <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser/0.25.1792.1048@0.25.1792.1048" timestamp="1697969120796" />
     <state x="636" y="478" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1697963222730">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
@@ -306,7 +307,7 @@
     </state>
     <state width="526" height="466" key="DebuggerActiveHint/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697786782165" />
     <state width="550" height="466" key="DebuggerActiveHint/0.25.1792.1048@0.25.1792.1048" timestamp="1697880806346" />
-    <state width="1750" height="176" key="GridCell.Tab.0.bottom" timestamp="1697966794017">
+    <state width="1750" height="181" key="GridCell.Tab.0.bottom" timestamp="1697967877345">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126415" />
@@ -314,8 +315,8 @@
     <state width="1750" height="2" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="183" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697809313769" />
     <state width="1750" height="88" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697793243618" />
-    <state width="1750" height="176" key="GridCell.Tab.0.bottom/0.25.1792.1048@0.25.1792.1048" timestamp="1697966794017" />
-    <state width="1750" height="176" key="GridCell.Tab.0.center" timestamp="1697966794016">
+    <state width="1750" height="181" key="GridCell.Tab.0.bottom/0.25.1792.1048@0.25.1792.1048" timestamp="1697967877345" />
+    <state width="1750" height="181" key="GridCell.Tab.0.center" timestamp="1697967877344">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
@@ -323,8 +324,8 @@
     <state width="1750" height="2" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="183" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697809313759" />
     <state width="1750" height="88" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697793243616" />
-    <state width="1750" height="176" key="GridCell.Tab.0.center/0.25.1792.1048@0.25.1792.1048" timestamp="1697966794016" />
-    <state width="1750" height="176" key="GridCell.Tab.0.left" timestamp="1697966794016">
+    <state width="1750" height="181" key="GridCell.Tab.0.center/0.25.1792.1048@0.25.1792.1048" timestamp="1697967877344" />
+    <state width="1750" height="181" key="GridCell.Tab.0.left" timestamp="1697967877343">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
@@ -332,8 +333,8 @@
     <state width="1750" height="2" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695069" />
     <state width="1878" height="183" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697809313758" />
     <state width="1750" height="88" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697793243615" />
-    <state width="1750" height="176" key="GridCell.Tab.0.left/0.25.1792.1048@0.25.1792.1048" timestamp="1697966794016" />
-    <state width="1750" height="176" key="GridCell.Tab.0.right" timestamp="1697966794017">
+    <state width="1750" height="181" key="GridCell.Tab.0.left/0.25.1792.1048@0.25.1792.1048" timestamp="1697967877343" />
+    <state width="1750" height="181" key="GridCell.Tab.0.right" timestamp="1697967877344">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126414" />
@@ -341,7 +342,7 @@
     <state width="1750" height="2" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
     <state width="1878" height="183" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697809313767" />
     <state width="1750" height="88" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697793243617" />
-    <state width="1750" height="176" key="GridCell.Tab.0.right/0.25.1792.1048@0.25.1792.1048" timestamp="1697966794017" />
+    <state width="1750" height="181" key="GridCell.Tab.0.right/0.25.1792.1048@0.25.1792.1048" timestamp="1697967877344" />
     <state width="1750" height="281" key="GridCell.Tab.1.bottom" timestamp="1697966296896">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
