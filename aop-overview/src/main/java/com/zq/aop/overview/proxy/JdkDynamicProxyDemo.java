@@ -6,12 +6,12 @@ import java.lang.reflect.Proxy;
 
 /**
  * JDK 动态代理实现
- *
+ * <p>
  * 视频：08丨Java AOP代理模式（Proxy）：Java静态代理和动态代理的区别是什么？.mp4
  * PPT:  第一章 - Spring AOP 总览.pdf
  *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
- * @since  2023-10-22 16:43:49
+ * @since 2023-10-22 16:43:49
  */
 public class JdkDynamicProxyDemo {
 
@@ -23,6 +23,14 @@ public class JdkDynamicProxyDemo {
 
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
+		// class com.sun.proxy.$Proxy0
+		// $Proxy0 这个类一定是实现了 EchoService 这个接口
+		// $Proxy0 extends java.lang.reflect.Proxy implements EchoService {
+		//   $Proxy0(InvocationHandler handler) {
+		//		super(handler);
+		//   }
+		//
+		// }
 		Object proxy = Proxy.newProxyInstance(classLoader, new Class[]{EchoService.class}, new InvocationHandler() {
 
 			@Override
@@ -39,5 +47,15 @@ public class JdkDynamicProxyDemo {
 		// 把代理对象转成我们目标对象
 		EchoService echoService = (EchoService) proxy;
 		echoService.echo("Hello, World");
+
+		// class com.sun.proxy.$Proxy1
+		Object proxy2 = Proxy.newProxyInstance(classLoader, new Class[]{Comparable.class}, new InvocationHandler() {
+			@Override
+			public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+				return null;
+			}
+		});
+
+		System.out.println(proxy2);
 	}
 }
