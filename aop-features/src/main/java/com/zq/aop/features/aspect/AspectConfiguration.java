@@ -1,11 +1,16 @@
 package com.zq.aop.features.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.core.annotation.Order;
+
+import java.util.Random;
 
 /**
  * Aspect 配置类，基于注解
@@ -30,6 +35,11 @@ public class AspectConfiguration {
 	// Pointcut 筛选出 Joint Point，执行是 Advice
 	@Before("anyPublicMethod()")
 	public void beforeAnyPublicMethod() {
+		Random random = new Random();
+		if (random.nextBoolean()) {
+			throw new RuntimeException("故意抛出异常");
+		}
+
 		System.out.println("@Before any public method.");
 	}
 
@@ -39,5 +49,26 @@ public class AspectConfiguration {
 	public Object aroundAnyPublicMethod(ProceedingJoinPoint pjp) throws Throwable {
 		System.out.println("@Around any public method.");
 		return pjp.proceed();
+	}
+
+	/**********************************************************************************
+	 * AfterReturning 最后执行，它不是一定需要方法有返回值，方法可以没有返回值
+	 * After 相当于 try..finally 必须执行，不是最后执行的意思，是必须执行的意思
+	 * AfterThrowing 在抛出异常时执行，这个异常也包含在比如 Before 时发生的异常，它相当于 catch 这种操作
+	 *
+	 **********************************************************************************/
+	@AfterReturning("anyPublicMethod()")
+	public void afterReturningAnyPublicMethod() {
+		System.out.println("@AfterReturning any public method.");
+	}
+
+	@After("anyPublicMethod()")
+	public void afterAnyPublicMethod() {
+		System.out.println("@After any public method.");
+	}
+
+	@AfterThrowing("anyPublicMethod()")
+	public void	afterThrowingAnyPublicMethod() {
+		System.out.println("@AfterThrowing any public method.");
 	}
 }

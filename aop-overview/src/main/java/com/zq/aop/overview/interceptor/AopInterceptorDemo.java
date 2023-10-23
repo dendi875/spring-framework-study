@@ -48,7 +48,7 @@ public class AopInterceptorDemo {
 						EchoService echoService = new DefaultEchoService();
 						result = echoService.echo((String) args[0]); // 目标对象执行
 
-						// 方法执行后置拦截器
+						// 方法执行后置拦截器，相当于 AfterReturning
 						AfterReturnInterceptor afterReturnInterceptor = new AfterReturnInterceptor() {
 							@Override
 							public Object after(Object proxy, Method method, Object[] args, Object returnResult) {
@@ -58,12 +58,12 @@ public class AopInterceptorDemo {
 						// 后置拦截
 						endTime = (Long) afterReturnInterceptor.after(proxy, method, args, result);
 					} catch (Exception e) {
-						// 异常拦截器（处理方法执行后）
+						// 异常拦截器（处理方法执行后），相当于 AfterThrowing
 						ExceptionInterceptor interceptor = (proxy1, method1, args1, throwable) -> {
 						};
 					} finally {
 						// finally 后置拦截器
-						FinallyInterceptor interceptor = new TimeFinallyInterceptor(startTime, endTime);
+						FinallyInterceptor interceptor = new TimeFinallyInterceptor(startTime, endTime); // 相当于 After
 						Long costTime = (Long) interceptor.finalize(proxy, method, args, result);
 						System.out.println("echo 方法执行的实现：" + costTime + " ms.");
 					}
