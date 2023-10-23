@@ -10,6 +10,8 @@ import org.springframework.core.annotation.Order;
 /**
  * Aspect 配置类，基于注解
  *
+ * 在同一个Aspect里，一般 Around 在是 Before 之前执行
+ *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-23 14:52:23
  */

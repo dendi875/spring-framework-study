@@ -22,6 +22,7 @@
             <aop:pointcut id="anyPublicMethod" expression="execution(public * *(..))"/>
             <aop:around method="aroundAnyPublicMethod" pointcut-ref="anyPublicMethod"/>
             <aop:before method="beforeAnyPublicMethod" pointcut-ref="anyPublicMethod"/>
+            <aop:before method="beforeAnyPublicMethod" pointcut="execution(public * *(..))"/>
         </aop:aspect>
     </aop:config>
 
