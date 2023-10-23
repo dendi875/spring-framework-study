@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba24da9-ea57-4763-9c7d-67756aaaa794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/CglibDynamicProxyDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-features/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-features/src/main/java/com/zq/aop/features/AspectJAnnotationDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-features/src/main/java/com/zq/aop/features/AspectJXmlDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-features/src/main/resources/META-INF/spring-aop-context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aop-overview/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/aop-overview/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aop-overview/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aop-overview/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/proxy/JdkDynamicProxyDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/proxy/JdkDynamicProxyDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,11 +90,11 @@
       <recent name="com.zq.bean.lifecycle" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/aop-features/src/main/resources/META-INF" />
       <recent name="$PROJECT_DIR$/validation" />
       <recent name="$PROJECT_DIR$/configuration-metadata/src/main/resources/com/zq/configuration/metadata" />
       <recent name="$PROJECT_DIR$/configuration-metadata/src/main/resources/META-INF" />
       <recent name="$PROJECT_DIR$/dependency-injection/src/main/resources" />
-      <recent name="$PROJECT_DIR$/spring-bean/src/main/resources/META-INF" />
     </key>
     <key name="MoveInnerDialog.RECENTS_KEY">
       <recent name="com.zq.generic" />
@@ -110,11 +112,11 @@
       <recent name="$PROJECT_DIR$/spring-bean" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zq.aop.features" />
       <recent name="com.zq.aop.overview.interceptor" />
       <recent name="com.zq.annotation" />
       <recent name="com.zq.event" />
       <recent name="com.zq.resource" />
-      <recent name="com.zq.dependency.injection" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zq.questions" />
@@ -122,13 +124,39 @@
       <recent name="com.zq.spring.ioc.overview.annotation" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CglibDynamicProxyDemo">
+  <component name="RunManager" selected="Application.AspectJXmlDemo">
     <configuration name="AopInterceptorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zq.aop.overview.interceptor.AopInterceptorDemo" />
       <module name="aop-overview" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.zq.aop.overview.interceptor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AspectJAnnotationDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zq.aop.features.AspectJAnnotationDemo" />
+      <module name="aop-features" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zq.aop.features.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AspectJXmlDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zq.aop.features.AspectJXmlDemo" />
+      <module name="aop-features" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zq.aop.features.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,32 +190,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StaticProxyDemo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zq.aop.overview.proxy.StaticProxyDemo" />
-      <module name="aop-overview" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zq.aop.overview.proxy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TargetFilterDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zq.aop.overview.predicate.TargetFilterDemo" />
-      <module name="aop-overview" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zq.aop.overview.predicate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Debug Tomcat" type="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -202,20 +204,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.StaticProxyDemo (1)" />
       <item itemvalue="Application.JdkDynamicProxyDemo" />
-      <item itemvalue="Application.TargetFilterDemo" />
       <item itemvalue="Application.AopInterceptorDemo" />
       <item itemvalue="Remote.Debug Tomcat" />
       <item itemvalue="Application.CglibDynamicProxyDemo" />
+      <item itemvalue="Application.AspectJAnnotationDemo" />
+      <item itemvalue="Application.AspectJXmlDemo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AspectJXmlDemo" />
+        <item itemvalue="Application.AspectJAnnotationDemo" />
         <item itemvalue="Application.CglibDynamicProxyDemo" />
         <item itemvalue="Application.JdkDynamicProxyDemo" />
         <item itemvalue="Application.AopInterceptorDemo" />
-        <item itemvalue="Application.TargetFilterDemo" />
-        <item itemvalue="Application.StaticProxyDemo (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +249,7 @@
       <workItem from="1697686476703" duration="19585000" />
       <workItem from="1697719106239" duration="43803000" />
       <workItem from="1697878994139" duration="14120000" />
-      <workItem from="1697968868103" duration="6043000" />
+      <workItem from="1697968868103" duration="11363000" />
     </task>
     <servers />
   </component>
@@ -255,11 +257,11 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="509" y="217" key="#Project_Structure" timestamp="1697877061121">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state x="-1375" y="-559" key="#Project_Structure" timestamp="1698042656796">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state x="-1375" y="-432" key="#Project_Structure/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693796995669" />
-    <state x="-1375" y="-559" key="#Project_Structure/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697181582095" />
+    <state x="-1375" y="-559" key="#Project_Structure/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698042656796" />
     <state x="509" y="217" key="#Project_Structure/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697010026316" />
     <state x="509" y="217" key="#Project_Structure/0.25.1792.1048@0.25.1792.1048" timestamp="1697877061121" />
     <state x="647" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1697773518579">
@@ -268,10 +270,11 @@
     <state x="-1227" y="-574" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696645797141" />
     <state x="647" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697773518579" />
     <state x="647" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1792.1048@0.25.1792.1048" timestamp="1697274120737" />
-    <state x="464" y="356" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1697424626085">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state x="-1423" y="-419" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1698042537893">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state x="464" y="356" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694597086944" />
+    <state x="-1423" y="-419" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698042537893" />
     <state x="464" y="356" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697424626085" />
     <state x="721" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1697969120796">
       <screen x="0" y="25" width="1792" height="1048" />
@@ -304,72 +307,72 @@
     </state>
     <state width="526" height="466" key="DebuggerActiveHint/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697786782165" />
     <state width="550" height="466" key="DebuggerActiveHint/0.25.1792.1048@0.25.1792.1048" timestamp="1697978218976" />
-    <state width="1750" height="181" key="GridCell.Tab.0.bottom" timestamp="1697979904897">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state width="1878" height="278" key="GridCell.Tab.0.bottom" timestamp="1698042841378">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126415" />
     <state width="1750" height="272" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781275" />
     <state width="1750" height="2" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
-    <state width="1878" height="183" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697809313769" />
+    <state width="1878" height="278" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698042841378" />
     <state width="1750" height="88" key="GridCell.Tab.0.bottom/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697793243618" />
     <state width="1750" height="181" key="GridCell.Tab.0.bottom/0.25.1792.1048@0.25.1792.1048" timestamp="1697979904897" />
-    <state width="1750" height="181" key="GridCell.Tab.0.center" timestamp="1697979904896">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state width="1878" height="278" key="GridCell.Tab.0.center" timestamp="1698042841376">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
     <state width="1750" height="272" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781274" />
     <state width="1750" height="2" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
-    <state width="1878" height="183" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697809313759" />
+    <state width="1878" height="278" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698042841376" />
     <state width="1750" height="88" key="GridCell.Tab.0.center/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697793243616" />
     <state width="1750" height="181" key="GridCell.Tab.0.center/0.25.1792.1048@0.25.1792.1048" timestamp="1697979904896" />
-    <state width="1750" height="181" key="GridCell.Tab.0.left" timestamp="1697979904896">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state width="1878" height="278" key="GridCell.Tab.0.left" timestamp="1698042841375">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126413" />
     <state width="1750" height="272" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781274" />
     <state width="1750" height="2" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695069" />
-    <state width="1878" height="183" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697809313758" />
+    <state width="1878" height="278" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698042841375" />
     <state width="1750" height="88" key="GridCell.Tab.0.left/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697793243615" />
     <state width="1750" height="181" key="GridCell.Tab.0.left/0.25.1792.1048@0.25.1792.1048" timestamp="1697979904896" />
-    <state width="1750" height="181" key="GridCell.Tab.0.right" timestamp="1697979904897">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state width="1878" height="278" key="GridCell.Tab.0.right" timestamp="1698042841377">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state width="1878" height="243" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693831126414" />
     <state width="1750" height="272" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682781275" />
     <state width="1750" height="2" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695070" />
-    <state width="1878" height="183" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697809313767" />
+    <state width="1878" height="278" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698042841377" />
     <state width="1750" height="88" key="GridCell.Tab.0.right/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697793243617" />
     <state width="1750" height="181" key="GridCell.Tab.0.right/0.25.1792.1048@0.25.1792.1048" timestamp="1697979904897" />
-    <state width="1750" height="181" key="GridCell.Tab.1.bottom" timestamp="1697979905218">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state width="1878" height="278" key="GridCell.Tab.1.bottom" timestamp="1698042842340">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state width="1750" height="2" key="GridCell.Tab.1.bottom/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694601474721" />
     <state width="1750" height="2" key="GridCell.Tab.1.bottom/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695071" />
-    <state width="1878" height="40" key="GridCell.Tab.1.bottom/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697808849841" />
+    <state width="1878" height="278" key="GridCell.Tab.1.bottom/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698042842340" />
     <state width="1750" height="285" key="GridCell.Tab.1.bottom/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697786293856" />
     <state width="1750" height="181" key="GridCell.Tab.1.bottom/0.25.1792.1048@0.25.1792.1048" timestamp="1697979905218" />
-    <state width="1750" height="181" key="GridCell.Tab.1.center" timestamp="1697979905218">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state width="1878" height="278" key="GridCell.Tab.1.center" timestamp="1698042842340">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state width="1750" height="2" key="GridCell.Tab.1.center/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694601474720" />
     <state width="1750" height="2" key="GridCell.Tab.1.center/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695071" />
-    <state width="1878" height="40" key="GridCell.Tab.1.center/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697808849840" />
+    <state width="1878" height="278" key="GridCell.Tab.1.center/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698042842340" />
     <state width="1750" height="285" key="GridCell.Tab.1.center/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697786293855" />
     <state width="1750" height="181" key="GridCell.Tab.1.center/0.25.1792.1048@0.25.1792.1048" timestamp="1697979905218" />
-    <state width="1750" height="181" key="GridCell.Tab.1.left" timestamp="1697979905217">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state width="1878" height="278" key="GridCell.Tab.1.left" timestamp="1698042842339">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state width="1750" height="2" key="GridCell.Tab.1.left/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694601474719" />
     <state width="1750" height="2" key="GridCell.Tab.1.left/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695071" />
-    <state width="1878" height="40" key="GridCell.Tab.1.left/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697808849839" />
+    <state width="1878" height="278" key="GridCell.Tab.1.left/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698042842339" />
     <state width="1750" height="285" key="GridCell.Tab.1.left/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697786293854" />
     <state width="1750" height="181" key="GridCell.Tab.1.left/0.25.1792.1048@0.25.1792.1048" timestamp="1697979905217" />
-    <state width="1750" height="181" key="GridCell.Tab.1.right" timestamp="1697979905218">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state width="1878" height="278" key="GridCell.Tab.1.right" timestamp="1698042842340">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state width="1750" height="2" key="GridCell.Tab.1.right/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694601474720" />
     <state width="1750" height="2" key="GridCell.Tab.1.right/0.25.1792.1048/-1920.-641.1920.1055@0.25.1792.1048" timestamp="1694748695071" />
-    <state width="1878" height="40" key="GridCell.Tab.1.right/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697808849841" />
+    <state width="1878" height="278" key="GridCell.Tab.1.right/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698042842340" />
     <state width="1750" height="285" key="GridCell.Tab.1.right/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697786293855" />
     <state width="1750" height="181" key="GridCell.Tab.1.right/0.25.1792.1048@0.25.1792.1048" timestamp="1697979905218" />
     <state x="515" y="247" key="NewModule_or_Project.wizard" timestamp="1697357431074">
@@ -387,12 +390,12 @@
     <state x="-1466" y="-458" key="SettingsEditor/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693469249516" />
     <state x="424" y="191" key="SettingsEditor/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1696672986873" />
     <state x="424" y="191" key="SettingsEditor/0.25.1792.1048@0.25.1792.1048" timestamp="1697357434046" />
-    <state x="872" y="231" width="540" height="524" key="StructurePopup" timestamp="1697978676896">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state x="-986" y="-545" width="579" height="528" key="StructurePopup" timestamp="1698041597964">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
-    <state x="-986" y="-545" width="579" height="528" key="StructurePopup/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697809880515" />
+    <state x="-986" y="-545" width="579" height="528" key="StructurePopup/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698041597964" />
     <state x="511" y="231" width="540" height="524" key="StructurePopup/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697799752062" />
-    <state x="872" y="231" width="540" height="524" key="StructurePopup/0.25.1792.1048@0.25.1792.1048" timestamp="1697978676896" />
+    <state x="872" y="231" width="540" height="524" key="StructurePopup/0.25.1792.1048@0.25.1792.1048" timestamp="1697981922369" />
     <state x="573" y="378" key="com.intellij.ide.util.TipDialog" timestamp="1697878994237">
       <screen x="0" y="25" width="1792" height="1048" />
     </state>
@@ -411,19 +414,19 @@
     </state>
     <state x="-1790" y="-752" width="1371" height="1008" key="dock-window-1/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697628308535" />
     <state x="130" y="65" width="1371" height="1008" key="dock-window-1/0.25.1792.1048@0.25.1792.1048" timestamp="1697034932477" />
-    <state x="559" y="306" width="867" height="486" key="find.popup" timestamp="1697872861586">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state x="-1321" y="-469" width="921" height="729" key="find.popup" timestamp="1698042604465">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state x="559" y="306" width="859" height="486" key="find.popup/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694679208377" />
-    <state x="-1321" y="-469" width="921" height="729" key="find.popup/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1696657232104" />
+    <state x="-1321" y="-469" width="921" height="729" key="find.popup/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698042604465" />
     <state x="559" y="306" width="867" height="725" key="find.popup/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697795827696" />
     <state x="559" y="306" width="867" height="486" key="find.popup/0.25.1792.1048@0.25.1792.1048" timestamp="1697872861586" />
-    <state x="599" y="270" key="new project wizard" timestamp="1697898345434">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state x="-1582" y="-605" key="new project wizard" timestamp="1698038883750">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state x="-1573" y="-403" key="new project wizard/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693796978646" />
     <state x="505" y="150" key="new project wizard/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694685321728" />
-    <state x="-1582" y="-605" key="new project wizard/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697806120516" />
+    <state x="-1582" y="-605" key="new project wizard/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698038883750" />
     <state x="271" y="173" key="new project wizard/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697772346130" />
     <state x="599" y="270" key="new project wizard/0.25.1792.1048@0.25.1792.1048" timestamp="1697898345434" />
     <state x="913" y="313" key="refactoring.ChangeSignatureDialog" timestamp="1697291460909">
@@ -436,14 +439,14 @@
     <state x="-1295" y="-70" width="670" height="675" key="run.anything.popup/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693795469111" />
     <state x="583" y="576" width="670" height="671" key="run.anything.popup/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697721185524" />
     <state x="583" y="576" width="670" height="671" key="run.anything.popup/0.25.1792.1048@0.25.1792.1048" timestamp="1697966083282" />
-    <state x="571" y="528" width="670" height="672" key="search.everywhere.popup" timestamp="1697978658475">
-      <screen x="0" y="25" width="1792" height="1048" />
+    <state x="-1308" y="-246" width="718" height="677" key="search.everywhere.popup" timestamp="1698041556942">
+      <screen x="-1920" y="-752" width="1920" height="1055" />
     </state>
     <state x="-1295" y="-391" width="670" height="676" key="search.everywhere.popup/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693812587559" />
     <state x="583" y="257" width="670" height="672" key="search.everywhere.popup/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682494566" />
-    <state x="-1308" y="-246" width="718" height="677" key="search.everywhere.popup/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1697809877664" />
+    <state x="-1308" y="-246" width="718" height="677" key="search.everywhere.popup/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698041556942" />
     <state x="571" y="528" width="671" height="673" key="search.everywhere.popup/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697799745079" />
-    <state x="571" y="528" width="670" height="672" key="search.everywhere.popup/0.25.1792.1048@0.25.1792.1048" timestamp="1697978658475" />
+    <state x="571" y="528" width="670" height="672" key="search.everywhere.popup/0.25.1792.1048@0.25.1792.1048" timestamp="1697982151237" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -494,11 +497,6 @@
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.2.RELEASE/spring-beans-5.2.2.RELEASE-sources.jar!/org/springframework/beans/factory/xml/BeanDefinitionParserDelegate.java</url>
-          <line>1385</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/resource/src/main/java/sun/net/www/protocol/x/HandlerTest.java</url>
           <line>18</line>
           <option name="timeStamp" value="46" />
@@ -525,21 +523,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.2.RELEASE/spring-beans-5.2.2.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>580</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.2.RELEASE/spring-beans-5.2.2.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
           <line>959</line>
           <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.2.2.RELEASE/spring-beans-5.2.2.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java</url>
-          <line>587</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/proxy/JdkDynamicProxyDemo.java</url>
@@ -547,24 +532,19 @@
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/lang/reflect/Proxy.java</url>
-          <line>707</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/lang/reflect/Proxy.java</url>
-          <line>568</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/src.zip!/java/lang/reflect/Proxy.java</url>
-          <line>718</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/aop-overview/src/main/java/com/zq/aop/overview/CglibDynamicProxyDemo.java</url>
           <line>42</line>
           <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/aop-features/src/main/java/com/zq/aop/features/AspectJAnnotationDemo.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/aop-features/src/main/java/com/zq/aop/features/AspectJXmlDemo.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="75" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -104,20 +104,31 @@ Declaring additional methods or fields on behalf of a type. Spring AOP lets you 
 ## Spring AOP 代理实现
 * JDK 动态代理实现--基于接口代理
 ```java
-JdkDynamicAopProxy
+org.springframework.aop.framework.JdkDynamicAopProxy
 ```
 * CCLIB 动态代理实现--基于类代理（字节码提升）
 ```java
-CglibAopProxy
+org.springframework.aop.framework.CglibAopProxy
 ```
 可以看到 JdkDynamicAopProxy 与 CglibAopProxy 这两个类都不是 public class,
 所以需要某个方式来进行封装，当我的目标对象是接口时就用 JdkDynamicAopProxy，是类的就用 CglibAopProxy（字节码的提升）
 
 * AspectJ 适配实现
 ```java
-AspectJProxyFactory
+org.springframework.aop.aspectj.annotation.AspectJProxyFactory
 ```
 
+# Spring AOP 与 AspectJ AOP 的区别
 
-## 参考资料
+* AspectJ 是 AOP 的完整实现，Spring AOP 则是部分实现
+* Spring AOP 比 AspectJ 使用更简单
+* Spring AOP 整合了 AspectJ 注解与 Spring IoC 容器
+* Spring AOP 仅支持基于代理模式的 AOP
+* Spring AOP 仅支持方法级别的 Pointcuts
+
+# 参考资料
+
+* https://docs.spring.io/spring-framework/docs/5.2.25.RELEASE/spring-framework-reference/core.html#aop-pointcuts
+
 * https://eclipse.dev/aspectj/doc/released/progguide/index.html
+* https://eclipse.dev/aspectj/doc/released/adk15notebook/index.html
