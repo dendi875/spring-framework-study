@@ -4,6 +4,8 @@ Aspect 相当于一个 Class 一样，Join point 相当于一个方法，Advice 
 
 一个 Aspect 可能会对应多个 Join point，一个 Join point 会对应多个 Advice。1:N:N 关系。
 
+pointCut 是一个筛选操作，而 Advice 是一个执行操作。
+
 ## AOP 定义
 
 面向切面编程的缩写
