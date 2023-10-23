@@ -1,11 +1,13 @@
 package com.zq.aop.features.aspect;
 
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
 /**
- * Aspect 配置类
+ * Aspect 配置类，基于注解
  *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-23 14:52:23
@@ -25,5 +27,13 @@ public class AspectConfiguration {
 	@Before("anyPublicMethod()")
 	public void beforeAnyPublicMethod() {
 		System.out.println("@Before any public method.");
+	}
+
+	// @Around 注解和 @Before 注解的区别？
+	// Before 不需要显示触发方法执行，Around 需要显式触发（pjp.proceed()）
+	@Around("anyPublicMethod()")
+	public Object aroundAnyPublicMethod(ProceedingJoinPoint pjp) throws Throwable {
+		System.out.println("@Around any public method.");
+		return pjp.proceed();
 	}
 }
