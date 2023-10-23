@@ -20,6 +20,7 @@
     <aop:config>
         <aop:aspect id="AspectXmlConfig" ref="aspectXmlConfig">  <!--声明切面 id 需要是一个类名称，所以首字母大写-->
             <aop:pointcut id="anyPublicMethod" expression="execution(public * *(..))"/>
+            <aop:around method="aroundAnyPublicMethod" pointcut-ref="anyPublicMethod"/>
             <aop:before method="beforeAnyPublicMethod" pointcut-ref="anyPublicMethod"/>
         </aop:aspect>
     </aop:config>
