@@ -13,6 +13,17 @@
 
     <aop:aspectj-autoproxy/>
 
+
+    <bean id="aspectXmlConfig" class="com.zq.aop.features.aspect.AspectXmlConfig"></bean>
+
+    <!--基于xml使用pointcut例子-->
+    <aop:config>
+        <aop:aspect id="AspectXmlConfig" ref="aspectXmlConfig">  <!--声明切面 id 需要是一个类名称，所以首字母大写-->
+            <aop:pointcut id="anyPublicMethod" expression="execution(public * *(..))"/>
+            <aop:before method="beforeAnyPublicMethod" pointcut-ref="anyPublicMethod"/>
+        </aop:aspect>
+    </aop:config>
+
     <!-- 定义一个 echoService Bean，要被创建代理的 Bean-->
     <bean id="echoService" class="com.zq.aop.overview.proxy.DefaultEchoService">
 
