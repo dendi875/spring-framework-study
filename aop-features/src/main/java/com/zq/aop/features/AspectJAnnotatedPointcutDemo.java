@@ -1,6 +1,7 @@
 package com.zq.aop.features;
 
 import com.zq.aop.features.aspect.AspectConfiguration;
+import com.zq.aop.features.aspect.AspectConfiguration2;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
@@ -17,7 +18,10 @@ public class AspectJAnnotatedPointcutDemo {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 
 		// 注册 Configuration Class
-		context.register(AspectJAnnotatedPointcutDemo.class, AspectConfiguration.class);
+		context.register(
+				AspectJAnnotatedPointcutDemo.class,
+				AspectConfiguration.class,
+				AspectConfiguration2.class);
 
 		// 启动 Spring 应用上下文
 		context.refresh();
