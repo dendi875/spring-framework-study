@@ -36,6 +36,7 @@
 
     <bean id="echoServiceMethodInterceptor" class="com.zq.aop.features.interceptor.EchoServiceMethodInterceptor"/>
 
+    <!--这种方式不是自动创建的代理对象，是通过 ProxyFactoryBean 创建了一个 echoService 的代理对象-->
     <bean id="echoServiceProxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
         <property name="targetName" value="echoService"/> <!--echoService 这个 bean 就会被创建代理-->
         <property name="interceptorNames">

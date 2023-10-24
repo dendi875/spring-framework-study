@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 定义一个 echoService Bean，要被创建代理的 Bean-->
+    <bean id="echoService" class="com.zq.aop.overview.proxy.DefaultEchoService">
+
+    </bean>
+
+    <!--Advice Bean-->
+    <bean id="echoServiceMethodInterceptor" class="com.zq.aop.features.interceptor.EchoServiceMethodInterceptor"/>
+
+<!--    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">-->
+<!--        <property name="beanNames" value="echo*"/> &lt;!&ndash;所有以echo开关的bean对象都会被自动创建代理对象&ndash;&gt;-->
+<!--        <property name="interceptorNames">-->
+<!--            <list>-->
+<!--                <value>echoServiceMethodInterceptor</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+<!--    把 com.zq.aop.features.PointcutAPIDemo-->
+<!--    DefaultPointcutAdvisor advisor = new DefaultPointcutAdvisor(pointcut, new EchoServiceMethodInterceptor());-->
+<!--    后面的创建 ProxyFactory，并添加 advisor 由 DefaultAdvisorAutoProxyCreator 自动完成了-->
+<!--    主要就是配置advisor，然后 DefaultAdvisorAutoProxyCreator 会把应用上下文中的 advisor 添加支自动代理中-->
+
+    <bean id="echoServicePointcut" class="com.zq.aop.features.pointcut.EchoServicePointcut">
+        <constructor-arg index="0" value="echo"/>
+        <constructor-arg index="1" value="com.zq.aop.overview.proxy.EchoService"/>
+    </bean>
+    <bean class="org.springframework.aop.support.DefaultPointcutAdvisor">
+        <constructor-arg index="0" ref="echoServicePointcut"></constructor-arg>
+        <constructor-arg index="1" ref="echoServiceMethodInterceptor"></constructor-arg>
+    </bean>
+
+</beans>
