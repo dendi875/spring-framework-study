@@ -14,7 +14,7 @@ public class ThrowAdviceDemo {
 
 	public static void main(String[] args) {
 		// 确认目标对象（被代理对象）
-		ThrowAdviceDemo adviceDemo = new ThrowAdviceDemo();
+		ThrowAdviceDemo adviceDemo = new ThrowAdviceDemo(); // ThrowAdviceDemo 类没有实现任何接口，它就是CGLIB 代理（字节码的提升）
 
 		// 注入目标对象
 		ProxyFactory proxyFactory = new ProxyFactory(adviceDemo);

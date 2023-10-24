@@ -57,6 +57,10 @@ public class AspectConfiguration {
 	 * AfterThrowing 在抛出异常时执行，这个异常也包含在比如 Before 时发生的异常，它相当于 catch 这种操作
 	 *
 	 **********************************************************************************/
+	// 分析为什么会调用 afterReturningAnyPublicMethod() 这个方法
+	// AspectJAfterReturningAdvice 是 AfterReturningAdvice
+	// 一个 AfterReturningAdviceInterceptor 关联一个 AfterReturningAdvice
+	// AfterReturningAdviceInterceptor 是一个 MethodInterceptor
 	@AfterReturning("anyPublicMethod()")
 	public void afterReturningAnyPublicMethod() {
 		System.out.println("@AfterReturning any public method.");
