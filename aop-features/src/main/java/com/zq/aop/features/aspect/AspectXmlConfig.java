@@ -14,9 +14,9 @@ public class AspectXmlConfig {
 
 	public Object aroundAnyPublicMethod(ProceedingJoinPoint pjp) throws Throwable {
 		Random random = new Random();
-		if (random.nextBoolean()) {
-			throw new RuntimeException("AspectXmlConfig 故意抛出异常");
-		}
+		//if (random.nextBoolean()) {
+		//	throw new RuntimeException("AspectXmlConfig 故意抛出异常");
+		//}
 
 		System.out.println("@Around any public method: " + pjp.getSignature());
 		return pjp.proceed();
