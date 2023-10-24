@@ -48,7 +48,7 @@ A point during the execution of a program, such as the execution of a method or 
 
 Spring 里 Joint Point 包含一个方法或一个异常的处理，在 AspectJ 里它可以包含多个 Joint Point，你可以把它组织成一个形式。
 
-## PointCut （切入点）定义
+## PointCut （切入点/判断点）定义
 
 挑选出连接点，判断哪些 join point 需要横切。
 

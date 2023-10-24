@@ -1,10 +1,13 @@
 package com.zq.aop.features;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
 import com.zq.aop.features.interceptor.EchoServiceMethodInterceptor;
+import com.zq.aop.features.pointcut.EchoServiceEchoMethodPointcut;
 import com.zq.aop.features.pointcut.EchoServicePointcut;
 import com.zq.aop.overview.proxy.DefaultEchoService;
 import com.zq.aop.overview.proxy.EchoService;
 import org.springframework.aop.framework.ProxyFactory;
+import org.springframework.aop.support.ComposablePointcut;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
 
 /**
@@ -22,7 +25,13 @@ public class PointcutAPIDemo {
 
 	public static void main(String[] args) {
 		// 创建 Pointcut
-		EchoServicePointcut pointcut = new EchoServicePointcut("echo", EchoService.class);
+		EchoServicePointcut extendsPointcut = new EchoServicePointcut("echo", EchoService.class);
+		EchoServiceEchoMethodPointcut interfacePointcut = EchoServiceEchoMethodPointcut.INSTANCE;
+
+		ComposablePointcut pointcut = new ComposablePointcut(interfacePointcut);
+		// 组合实现，交集
+		pointcut.intersection(extendsPointcut.getClassFilter());
+		pointcut.intersection(extendsPointcut.getMethodMatcher());
 
 		// 添加 advisor，这里需要把 Pointcut 转换为 advisor，通过 DefaultPointcutAdvisor 来转换
 		DefaultPointcutAdvisor advisor = new DefaultPointcutAdvisor(pointcut, new EchoServiceMethodInterceptor());
