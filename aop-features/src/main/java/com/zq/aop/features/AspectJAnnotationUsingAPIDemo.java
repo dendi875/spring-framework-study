@@ -1,6 +1,7 @@
 package com.zq.aop.features;
 
 import com.zq.aop.features.aspect.AspectConfiguration;
+import org.springframework.aop.AfterReturningAdvice;
 import org.springframework.aop.MethodBeforeAdvice;
 import org.springframework.aop.aspectj.annotation.AspectJProxyFactory;
 
@@ -38,7 +39,21 @@ public class AspectJAnnotationUsingAPIDemo {
 			@Override
 			public void before(Method method, Object[] args, Object target) throws Throwable {
 				if ("put".equals(method.getName()) && args.length == 2) {
-					System.out.printf("[MethodBefore] 当前存放的是 Key: %s, Value: %s\n", args[0], args[1]);
+					System.out.printf("[MethodBeforeAdvice] 当前存放的是 Key: %s, Value: %s\n", args[0], args[1]);
+				}
+			}
+		});
+
+		// 添加 AfterReturningAdvice，这里被拦截的方法是 HashMap.put 这个public方法
+		proxyFactory.addAdvice(new AfterReturningAdvice() {
+			@Override
+			public void afterReturning(Object returnValue, Method method, Object[] args, Object target) throws Throwable {
+				if ("put".equals(method.getName()) && args.length == 2) {
+					System.out.printf("[AfterReturningAdvice] 当前存放的是 Key: %s, 新存放的 Value: %s，之前关联的 Value: %s\n",
+							args[0],
+							args[1],
+							returnValue
+					);
 				}
 			}
 		});
@@ -48,6 +63,7 @@ public class AspectJAnnotationUsingAPIDemo {
 		Map<String, Object> proxy = proxyFactory.getProxy();
 		// 使用代理对象操作
 		proxy.put("1", "A");
+		proxy.put("1", "B");
 
 		System.out.println(cache.get("1"));
 	}
