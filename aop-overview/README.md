@@ -128,6 +128,13 @@ org.springframework.aop.aspectj.annotation.AspectJProxyFactory
 * Spring AOP 仅支持基于代理模式的 AOP
 * Spring AOP 仅支持方法级别的 Pointcuts
 
+# 对应关系
+
+一个 Aspect 可以对应多个 JoinPoint
+一个 JoinPoint 可以对应多个 Advise
+一个 Advice 对应一个 Advisor
+一个 Advice 可以对应多种拦截的实现动作（AdvisorAdapter、DefaultAdvisorAdapterRegistry 来进行扩展 Advice ）
+
 # 参考资料
 
 * https://docs.spring.io/spring-framework/docs/5.2.25.RELEASE/spring-framework-reference/core.html#aop-pointcuts

@@ -8,6 +8,17 @@ import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
 import org.springframework.util.ObjectUtils;
 
+/**
+ * 包含 Spring Bean 生命周期：
+ * 1. 实例化前
+ * 2. 实例化后
+ * 3. 属性赋值前
+ * 4. 初始化前阶段
+ * 5. 初始化后阶段
+ *
+ * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
+ * @since  2023-10-25 15:33:37
+ */
 class MyInstantiationAwareBeanPostProcessor implements InstantiationAwareBeanPostProcessor {
 
 	@Override

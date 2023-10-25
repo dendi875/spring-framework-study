@@ -16,7 +16,13 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 /**
- * 包含：Spring Bean Aware接口回调、初始化中、初始化完成、销毁中、GC 阶段的示例
+ * Spring Bean 生命周期以下几个阶段：
+ *
+ * 1. Aware接口回调
+ * 2. 初始化中
+ * 3. 初始化完成
+ * 4. 销毁中
+ * 5. GC 阶段
  *
  * Spring Bean Aware接口回调阶段
  * • Spring Aware 接口

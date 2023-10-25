@@ -6,21 +6,21 @@
 4. Spring BeanDefinition 合并阶段 
 5. Spring Bean Class 加载阶段 
 
-6. Spring Bean 实例化前阶段 
+6. Spring Bean 实例化前阶段 (InstantiationAwareBeanPostProcessor#postProcessBeforeInstantiation)
 7. Spring Bean 实例化阶段 
-8. Spring Bean 实例化后阶段
+8. Spring Bean 实例化后阶段 (InstantiationAwareBeanPostProcessor#postProcessAfterInstantiation)
 
-9. Spring Bean 属性赋值前阶段 
+9. Spring Bean 属性赋值前阶段 (InstantiationAwareBeanPostProcessor#postProcessProperties)
 
-10. Spring Bean Aware接口回调阶段
+10. Spring Bean 9个Aware接口回调阶段
 
-11. Spring Bean 初始化前阶段 
-12. Spring Bean 初始化阶段 
-13. Spring Bean 初始化后阶段 
-14. Spring Bean 初始化完成阶段 
+11. Spring Bean 初始化前阶段 (BeanPostProcessor#postProcessBeforeInitialization)
+12. Spring Bean 初始化中阶段 (InitializingBean#afterPropertiesSet、@PostConstruct、自定义初始化方法) 
+13. Spring Bean 初始化后阶段 (BeanPostProcessor#postProcessAfterInitialization)
+14. Spring Bean 初始化完成阶段 (SmartInitializingSingleton#afterSingletonsInstantiated)
 
-15. Spring Bean 销毁前阶段 
-16. Spring Bean 销毁阶段 
+15. Spring Bean 销毁前阶段 (DestructionAwareBeanPostProcessor#postProcessBeforeDestruction)
+16. Spring Bean 销毁中阶段 (Disposable#destory、@PreDestroy、自定义销毁方法) 
 
 17. Spring Bean 垃圾收集
 
