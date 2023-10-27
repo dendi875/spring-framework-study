@@ -45,6 +45,7 @@ public class AspectConfiguration {
 
 	// @Around 注解和 @Before 注解的区别？
 	// Before 不需要显示触发方法执行，Around 需要显式触发（pjp.proceed()）
+	// Around 可以让你控制要不要执行下一步
 	@Around("anyPublicMethod()")
 	public Object aroundAnyPublicMethod(ProceedingJoinPoint pjp) throws Throwable {
 		System.out.println("@Around any public method.");

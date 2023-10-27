@@ -24,8 +24,8 @@ import java.lang.annotation.Target;
  * @since  2023-10-19 22:38:47
  */
 // @Import(HelloWorldConfiguration.class) // 第二步：方式一
-// @Import(HelloWorldImportSelector.class) // 第二步：方式二
-@Import(HelloWorldImportBeanDefinitionRegistrar.class) // 第二步：方式三
+@Import(HelloWorldImportSelector.class) // 第二步：方式二
+// @Import(HelloWorldImportBeanDefinitionRegistrar.class) // 第二步：方式三
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented

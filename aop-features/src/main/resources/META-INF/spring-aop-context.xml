@@ -11,6 +11,7 @@
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!--与 @EnableAspectJAutoProxy 功能一，一个是基于注解的，一个是基于XML的-->
     <aop:aspectj-autoproxy/>
 
 
@@ -31,7 +32,9 @@
 
     <!-- 定义一个 echoService Bean，要被创建代理的 Bean-->
     <bean id="echoService" class="com.zq.aop.overview.proxy.DefaultEchoService">
-
+        <!--视频：89丨作用域代理Schema-based实现 - aopscoped-proxy.mp4-->
+        <!--CGLIB 字节码提升的方式，类同于 @Configuration-->
+        <!--<aop:scoped-proxy proxy-target-class="true"/>-->
     </bean>
 
     <bean id="echoServiceMethodInterceptor" class="com.zq.aop.features.interceptor.EchoServiceMethodInterceptor"/>

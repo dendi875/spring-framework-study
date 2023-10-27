@@ -1,4 +1,4 @@
-package com.zq.aop.features.event;
+package com.zq.aop.features;
 
 import com.zq.aop.features.interceptor.EchoServiceMethodInterceptor;
 import com.zq.aop.overview.proxy.DefaultEchoService;

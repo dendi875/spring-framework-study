@@ -10,12 +10,12 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
  *
  * 基于 Extensible XML authoring 扩展 Spring XML 元素
  *
- * src/main/resources/META-INF/spring.schemas
- * src/main/resources/META-INF/spring.handlers
  * src/main/resources/com/zq/configuration/metadata/users.xsd
- * src/main/resources/META-INF/users-context.xml
  * com.zq.configuration.metadata.UsersNamespaceHandler
  * com.zq.configuration.metadata.UserBeanDefinitionParser
+ * src/main/resources/META-INF/spring.schemas
+ * src/main/resources/META-INF/spring.handlers
+ * src/main/resources/META-INF/users-context.xml
  *
  *
  * 参考：
@@ -24,10 +24,12 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
  * PPT：第十章 Spring 配置元信息（Configuration Metadata）.pdf
  *
  * Spring XML 扩展
- * 	• 编写 XML Schema 文件：定义 XML 结构
- * 	• 自定义 NamespaceHandler 实现：命名空间绑定
- * 	• 自定义 BeanDefinitionParser 实现：XML 元素与 BeanDefinition 解析
+ * 	• 编写 XML Schema 文件：定义 XML 结构 (src/main/resources/com/zq/configuration/metadata/users.xsd)
+ * 	• 自定义 NamespaceHandler 实现：命名空间绑定 {@link UsersNamespaceHandler}
+ * 	• 自定义 BeanDefinitionParser 实现：XML 元素与 BeanDefinition 解析 {@link UserBeanDefinitionParser}
  * 	• 注册 XML 扩展：命名空间与 XML Schema 映射
+ * 		(src/main/resources/META-INF/spring.schemas 和 src/main/resources/META-INF/spring.handlers)
+ *  • 使用自定义扩展 	src/main/resources/META-INF/users-context.xml
  *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-12 15:18:21
