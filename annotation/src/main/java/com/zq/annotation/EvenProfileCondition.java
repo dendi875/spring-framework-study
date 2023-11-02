@@ -14,6 +14,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 public class EvenProfileCondition implements Condition {
 
 	// 如果 matches 是匹配的，则激活该条件，或者该条件是通过的
+	// AnnotatedTypeMetadata 它主要是保留一些标注的元信息
 	@Override
 	public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
 		Environment environment = context.getEnvironment();

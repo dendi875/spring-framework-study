@@ -16,9 +16,9 @@ import java.lang.annotation.Target;
  *  第二步：通过 @Import 导入具体实现
  *
  *  第二步的具体实现又分为三种方式：
- *  方式一：通过 Configuration Class 实现
- *  方式二：实现 ImportSelector 接口
- *  方式三：实现 ImportBeanDefinitionRegistrar 接口
+ *  方式一：通过 Configuration Class 实现，比如 @EnableWebMvc
+ *  方式二：实现 ImportSelector 接口，比如 @EnableTransactionManagement
+ *  方式三：实现 ImportBeanDefinitionRegistrar 接口，比如 @EnableAspectJAutoProxy
  *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>
  * @since  2023-10-19 22:38:47

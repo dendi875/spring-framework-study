@@ -73,7 +73,7 @@ public class ProfileDemo {
 	}
 
 	@Bean(name = "number") // 返回偶数的 Bean
-	// @Profile("even") // 偶数--配置条件注解
+	//@Profile("even") // 偶数--配置条件注解
 	@Conditional(EvenProfileCondition.class) // 偶数--基于编程条件来实现
 	public Integer even() {
 		return 2;

@@ -65,7 +65,7 @@
 ## Spring 注解属性别名
 
 * 显式别名示例：@ComponentScan，子注解提供新的属性方法引用父（元）注解中的属性方法
-* 隐匿别名示例：@SpringBootApplication
+* 隐式别名示例：@SpringBootApplication
 * 传递性别名
 
 ###
@@ -97,7 +97,7 @@ public @interface SpringBootApplication {
 
 @ComponentScan 注解可以理解为 @SpringBootApplication 的父注解，
 在子注解  @SpringBootApplication 中提供了一个新的属性 scanBasePackages 来引用父注解（元注解） @ComponentScan
-中的 basePackages 的属性，有继承又有映射的关系在里面。这种方式就是隐式别名。
+中的 basePackages 的属性，有继承又有映射的意思在里面。这种方式就是隐式别名。
 
 ## Spring 注解属性覆盖
 
@@ -110,3 +110,26 @@ public @interface SpringBootApplication {
 也就是 A 注解 AliasFor B 之后，A 就会覆盖 B 相关的属性。A B 注解不一定要是有继承关系，可以 A B 就是同一个注解。
 
 * 覆盖的传递性，类似注解属性别名的传递性。
+
+## **@Enable** **注解模块举例**
+
+| 框架实现         | @Enable 注解模块               | 激活模块            |
+| ---------------- | ------------------------------ | ------------------- |
+| Spring Framework | @EnableWebMvc                  | Web MVC 模块        |
+|                  | @EnableTransactionManagement   | 事务管理模块        |
+|                  | @EnableCaching                 | Caching 模块        |
+|                  | @EnableMBeanExport             | JMX 模块            |
+|                  | @EnableAsync                   | 异步处理模块        |
+|                  | @EnableWebFlux                 | Web Flux 模块       |
+|                  | @EnableAspectJAutoProxy        | AspectJ 代理模块    |
+|                  |                                |                     |
+| Spring Boot      | @EnableAutoConfiguration       | 自动装配模块        |
+|                  | @EnableManagementContext       | Actuator 管理模块   |
+|                  | @EnableConfigurationProperties | 配置属性绑定模块    |
+|                  | @EnableOAuth2Sso               | OAuth2 单点登录模块 |
+|                  |                                |                     |
+| Spring Cloud     | @EnableEurekaServer            | Eureka服务器模块    |
+|                  | @EnableConfigServer            | 配置服务器模块      |
+|                  | @EnableFeignClients            | Feign客户端模块     |
+|                  | @EnableZuulProxy               | 服务网关 Zuul 模块  |
+|                  | @EnableCircuitBreaker          | 服务熔断模块        |
