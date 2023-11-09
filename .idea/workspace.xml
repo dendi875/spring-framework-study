@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba24da9-ea57-4763-9c7d-67756aaaa794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/aop-features/第三章：Spring AOP API 设计与实现.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aop-features/第二章：Spring AOP 基础.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aop-overview/第一章 - Spring AOP 总览.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application-context-lifecycle/第二十章 Spring 应用上下文生命周期（ApplicationContext Lifecycle）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bean-lifecycle/第九章 Spring Bean生命周期（Beans Lifecycle）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bean-scope/第八章 Spring Bean作用域（Scopes）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuration-metadata/第十章 Spring 配置元信息（Configuration Metadata）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conversion/第十五章 Spring 类型转换（Type Conversion）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data-binding/第十四章 Spring 数据绑定（Data Binding）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dependency-injection/第六章 Spring 依赖注入.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dependency-lookup/第五章 Spring 依赖查找.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dependency-source/第七章 Spring IoC依赖来源.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/environment/第十九章 Spring Environment 抽象（Environment Abstraction）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event/第十七章 Spring 事件（Events）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generic/第十六章 Spring 泛型处理（Generic Resolution）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/i18n/第十二章 Spring 国际化（i18n）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ioc-container-overview/第一章 Spring Framework 总览.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ioc-container-overview/第三章 Spring IoC 概述.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ioc-container-overview/第二章 重新认识 IoC.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/第十一章 Spring 资源管理（Resources）.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-bean/第四章 Spring Bean基础.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validation/第十三章 Spring 校验（Validation）.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-features/第五章：Spring AOP 在 Spring Framework 内部应用.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aop-features/第四章：Spring AOP API 设计模式.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -286,7 +266,7 @@
       <workItem from="1698830036934" duration="3243000" />
       <workItem from="1698990836120" duration="612000" />
       <workItem from="1699016143511" duration="10987000" />
-      <workItem from="1699422338391" duration="3455000" />
+      <workItem from="1699422338391" duration="6810000" />
     </task>
     <servers />
   </component>
@@ -512,11 +492,11 @@
     <state x="-1295" y="-197" width="718" height="676" key="run.anything.popup/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698045506372" />
     <state x="583" y="576" width="670" height="671" key="run.anything.popup/0.25.1792.1048/-1920.-752.1920.1055@0.25.1792.1048" timestamp="1697721185524" />
     <state x="583" y="576" width="670" height="671" key="run.anything.popup/0.25.1792.1048@0.25.1792.1048" timestamp="1697966083282" />
-    <state x="-1308" y="100" width="718" height="677" key="search.everywhere.popup" timestamp="1698843915182">
+    <state x="-1308" y="100" width="718" height="677" key="search.everywhere.popup" timestamp="1699433793215">
       <screen x="-1920" y="-406" width="1920" height="1055" />
     </state>
     <state x="-1308" y="-549" width="718" height="677" key="search.everywhere.popup/0.25.1792.1048/-1920.-1055.1920.1055@-1920.-1055.1920.1055" timestamp="1698144585203" />
-    <state x="-1308" y="100" width="718" height="677" key="search.everywhere.popup/0.25.1792.1048/-1920.-406.1920.1055@-1920.-406.1920.1055" timestamp="1698843915182" />
+    <state x="-1308" y="100" width="718" height="677" key="search.everywhere.popup/0.25.1792.1048/-1920.-406.1920.1055@-1920.-406.1920.1055" timestamp="1699433793215" />
     <state x="-1295" y="-391" width="670" height="676" key="search.everywhere.popup/0.25.1792.1048/-1920.-625.1920.1055@-1920.-625.1920.1055" timestamp="1693812587559" />
     <state x="583" y="257" width="670" height="672" key="search.everywhere.popup/0.25.1792.1048/-1920.-625.1920.1055@0.25.1792.1048" timestamp="1694682494566" />
     <state x="-1308" y="-246" width="718" height="677" key="search.everywhere.popup/0.25.1792.1048/-1920.-752.1920.1055@-1920.-752.1920.1055" timestamp="1698048116957" />
