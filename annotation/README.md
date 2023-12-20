@@ -133,3 +133,7 @@ public @interface SpringBootApplication {
 |                  | @EnableFeignClients            | Feign客户端模块     |
 |                  | @EnableZuulProxy               | 服务网关 Zuul 模块  |
 |                  | @EnableCircuitBreaker          | 服务熔断模块        |
+
+## 常用工具类
+
+*   AnnotationUtils

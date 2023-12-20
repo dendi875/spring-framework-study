@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!--与 @EnableAspectJAutoProxy 功能一，一个是基于注解的，一个是基于XML的-->
+    <!--与 @EnableAspectJAutoProxy 功能一样，一个是基于注解的，一个是基于XML的-->
     <aop:aspectj-autoproxy/>
 
 

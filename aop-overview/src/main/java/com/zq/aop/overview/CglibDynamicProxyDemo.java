@@ -11,7 +11,10 @@ import java.lang.reflect.Method;
 /**
  * Spring 基于 CGLIB 实现 AOP 的示例
  * <p>
- * 视频：16丨JDK动态代理：为什么Proxy.newProxyInstance会生成新的字节码？17丨CGLIB动态代理：为什么Java动态代理无法满足AOP的需要？.mp4
+ * 视频：
+ * 16丨JDK动态代理：为什么Proxy.newProxyInstance会生成新的字节码？
+ * 17丨CGLIB动态代理：为什么Java动态代理无法满足AOP的需要？.mp4
+ *
  * PPT: 第一章 - Spring AOP 总览.pdf
  *
  * @author <a href="mailto:quanzhang875@gmail.com">quanzhang875</a>

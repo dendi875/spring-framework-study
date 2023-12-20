@@ -4,7 +4,7 @@ Aspect 相当于一个 Class 一样，Join point 相当于一个方法，Advice 
 
 一个 Aspect 可能会对应多个 Join point，一个 Join point 会对应多个 Advice。1:N:N 关系。
 
-pointCut 是一个筛选操作，而 Advice 是一个执行操作。
+pointCut 是一个筛选操作，筛选出符合条件的 JoinPoint，筛选出来之后由 Advice去执行，Advice 是一个执行操作。
 
 ## AOP 定义
 
@@ -80,7 +80,7 @@ Action taken by an aspect at a particular join point. Different types of advice 
 
 Advice 包含了几种方式:
 
-around:  我围绕着，但我不做动作，这个动作做不做需要我们自己判断，我把它拦截住，至于执不执行，是需我们自己控制的。
+around:  Spring帮我们围绕着，但它不做动作，这个动作做不做需要我们自己判断，Spring把它拦截住，至于执不执行，是需我们自己控制的。
 
 before/after: 它是被动触发的，目标方法执行前或后去做。
 
@@ -133,11 +133,10 @@ org.springframework.aop.aspectj.annotation.AspectJProxyFactory
 一个 Aspect 可以对应多个 JoinPoint
 一个 JoinPoint 可以对应多个 Advise
 一个 Advice 对应一个 Advisor
-一个 Advice 可以对应多种拦截的实现动作（AdvisorAdapter、DefaultAdvisorAdapterRegistry 来进行扩展 Advice ）
+一个 Advice 可以对应多种拦截的实现动作（通过 AdvisorAdapter、DefaultAdvisorAdapterRegistry 来进行扩展 Advice ）
 
 # 参考资料
 
 * https://docs.spring.io/spring-framework/docs/5.2.25.RELEASE/spring-framework-reference/core.html#aop-pointcuts
-
 * https://eclipse.dev/aspectj/doc/released/progguide/index.html
 * https://eclipse.dev/aspectj/doc/released/adk15notebook/index.html
